@@ -91,7 +91,7 @@ Een deelnemer vult zijn code in en drukt op print
 
 Databaseserver met tabellen: users, scores, questions, answers, locations  
 
-API die http-requests ontvangt en de SQL-queries laat uitvoeren op de databaseserver 
+API die http-requests ontvangt en de SQL-queries laat uitvoeren op de databaseserver (nodejs + mysql)
 
 ### Documentatie: 
 
