@@ -15,7 +15,11 @@ namespace Admin_Opendeurspel
         public Form1()
         {
             InitializeComponent();
+<<<<<<< Updated upstream
             MessageBox.Show("test");
+=======
+            MessageBox.Show("Bong");
+>>>>>>> Stashed changes
         }
     }
 }
