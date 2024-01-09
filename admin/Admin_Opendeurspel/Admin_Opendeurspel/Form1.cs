@@ -15,6 +15,7 @@ namespace Admin_Opendeurspel
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("test");
         }
     }
 }
