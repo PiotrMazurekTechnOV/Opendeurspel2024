@@ -15,15 +15,6 @@ namespace Admin_Opendeurspel
         public Form1()
         {
             InitializeComponent();
-            MessageBox.Show("test");
-            MessageBox.Show("Bong");
-            MessageBox.Show("test123");
-            MessageBox.Show("test321");
-            MessageBox.Show("abc");
-
-            MessageBox.Show("HasanTest");
-            MessageBox.Show("Yassine");
-
         }
     }
 }
