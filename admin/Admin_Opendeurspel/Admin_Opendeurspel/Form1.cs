@@ -20,6 +20,8 @@ namespace Admin_Opendeurspel
             MessageBox.Show("mijn");
             MessageBox.Show("toekomstige");
             MessageBox.Show("vrouw");
+            MessageBox.Show("Ik verwacht 20k ring");
         }
+        
     }
 }
