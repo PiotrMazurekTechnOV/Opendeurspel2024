@@ -105,13 +105,17 @@ Alles wordt geupload naar github
 
 ## Workflow
 GHD = Github Desktop
+
 Kijk of je in de correcte branch zit: GHD -> current branch
+
 Voordat je een project opent: GHD -> fetch origin -> pull
+
 Als je klaar bent met een stuk code:
 - in GHD zul je je aanpassingen zien 
 - geef een uitleg van wat er is aangepast
 - commit
 - push naar je branch
+
 Na een paar commits:
 - pull request naar branch
 - druk op current branch -> pull requests -> create a pull request
