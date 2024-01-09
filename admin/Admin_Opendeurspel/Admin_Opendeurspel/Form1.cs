@@ -16,6 +16,9 @@ namespace Admin_Opendeurspel
         {
             InitializeComponent();
             MessageBox.Show("test");
+            MessageBox.Show("Bong");
+            MessageBox.Show("test123");
+            MessageBox.Show("test321");
         }
     }
 }
