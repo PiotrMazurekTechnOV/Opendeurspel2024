@@ -15,7 +15,23 @@ namespace Admin_Opendeurspel
         public Form1()
         {
             InitializeComponent();
-            MessageBox.Show("test");
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "112")
+            {
+                Form2 form2 = new Form2();
+                form2.Show();
+                Hide();
+                this.Closed += (s, args) => Close();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
