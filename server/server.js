@@ -36,6 +36,10 @@ app.get("/api/questions", (req, res) => {
       });
 }); 
 
+app.get("/api/test", (req, res) => {
+  console.log("test");
+  res.json("test");
+}); 
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
