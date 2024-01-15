@@ -30,6 +30,7 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.enterBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -50,11 +51,22 @@
             this.label1.Text = "In welke lokaal zit jij";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // enterBtn
+            // 
+            this.enterBtn.Location = new System.Drawing.Point(294, 230);
+            this.enterBtn.Name = "enterBtn";
+            this.enterBtn.Size = new System.Drawing.Size(172, 59);
+            this.enterBtn.TabIndex = 0;
+            this.enterBtn.Text = "Enter";
+            this.enterBtn.UseVisualStyleBackColor = true;
+            this.enterBtn.Click += new System.EventHandler(this.enterBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.enterBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
@@ -68,6 +80,7 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button enterBtn;
     }
 }
 

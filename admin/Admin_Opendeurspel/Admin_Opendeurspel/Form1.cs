@@ -20,6 +20,15 @@ namespace Admin_Opendeurspel
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enterBtn_Click(object sender, EventArgs e)
+        {
             if (textBox1.Text == "112")
             {
                 Form2 form2 = new Form2();
@@ -27,11 +36,6 @@ namespace Admin_Opendeurspel
                 Hide();
                 this.Closed += (s, args) => Close();
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

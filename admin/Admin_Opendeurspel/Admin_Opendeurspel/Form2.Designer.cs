@@ -34,6 +34,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::Admin_Opendeurspel.Properties.Resources.Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__1_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -46,6 +48,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Admin_Opendeurspel.Properties.Resources.Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__1_;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form2";
