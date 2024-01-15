@@ -50,7 +50,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(351, 223);
+            this.textBox1.Location = new System.Drawing.Point(910, 570);
             this.textBox1.MaximumSize = new System.Drawing.Size(1000, 1000);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -60,7 +60,7 @@
             // 
             // EnterBtn
             // 
-            this.EnterBtn.Location = new System.Drawing.Point(351, 285);
+            this.EnterBtn.Location = new System.Drawing.Point(910, 640);
             this.EnterBtn.Name = "EnterBtn";
             this.EnterBtn.Size = new System.Drawing.Size(99, 36);
             this.EnterBtn.TabIndex = 2;
