@@ -1,0 +1,23 @@
+Ruben en Hasan
+
+INSERTING USER-DATA:
+INSERT INTO USERS (first_name, last_name, age, email, code, consent) 
+
+Locatie1:
+
+SELECT * FROM USERS WHERE code = :user_code; 
+SELECT * FROM QUESTIONS WHERE location_id  = 	( SELECT location_id FROM USERS WHERE code =:user_code ); 
+// Present the questions to the user with multiple-choice options  
+for question in questions: print(question['question_text'])  
+// Display the question text # Display the options for the question  
+for option in question['options']: print(option['option_text']) 
+ // Display the option text  
+user_response = get_user_input() 
+ // Get the user's choice # Store or process the user's choice (option selected) process_user_response(user_response) 
+
+Locatie2: 
+
+SELECT * FROM USERS WHERE code = :user_code; 
+SELECT * FROM QUESTIONS WHERE location_id = :location_2_id; 
+
+
