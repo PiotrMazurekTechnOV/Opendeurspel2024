@@ -1,6 +1,6 @@
 Documentatie Database Import
-- Open Mysql
+- Open Mysql Workbench
 - Druk op Administration en klick op data import
-- Selecteer imoport van self-contained file
-- Selecteer het bestand en export
+- Selecteer "import from self-contained file"
+- Selecteer het bestand en import
 
