@@ -52,6 +52,25 @@ app.post("/api/user/add", async (req, res) => {
   }
 });
 
+app.post("/api/location/add", async (req, res) => {
+  try {
+    
+    const con = await connect();
+
+    
+    const { name, room} = req.body;
+    code += 1;
+    const [results, fields] = await con.execute(
+      "INSERT INTO locations (name, room) VALUES (?, ?)",
+      [name, room]
+    );
+
+    res.json("Location added successfully");
+  } catch (err) {
+    res.json({ error: err.message });
+  }
+});
+
 
 app.post("/api/questions/add", async (req, res) => {
   try {
