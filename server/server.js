@@ -186,7 +186,7 @@ app.get("/api/user/:code", async (req, res) => {
     const code = req.params.code;
     const [results, fields] = await con.execute("SELECT * FROM users WHERE code = ?", [code] );
 
-    res.json(code)
+    res.json(results)
   }
   catch (err){
     res.json(err)
