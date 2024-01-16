@@ -1,0 +1,34 @@
+RUBEN EN HASAN
+
+--  Gebruikersgegevens invoegen in de USERS-tabel
+    INSERT INTO USERS (first_name, last_name, age, email, code, consent) 
+
+--  Locatie1:
+--  Haal gebruikersgegevens op op basis van de opgegeven gebruikerscode
+    SELECT * FROM USERS WHERE code = :user_code; 
+
+--  Haal vragen op op basis van de locatie gekoppeld aan de gebruiker geïdentificeerd door de opgegeven gebruikerscode
+    SELECT * FROM QUESTIONS WHERE location_id = (SELECT location_id FROM USERS WHERE code =:user_code ); 
+
+//  Toon de vragen aan de gebruiker met meerkeuzeopties
+    for question in questions:
+    print(question['question_text'])
+
+        // Toon de tekst van de vraag
+        # Toon de opties voor de vraag
+   -    for option in question['options']:
+        print(option['option_text'])
+        // Toon de tekst van de optie
+
+ //  Ontvang de reactie van de gebruiker
+     user_response = get_user_input() 
+ //  Ontvang de keuze van de gebruiker
+     # Sla op of verwerk de keuze van de gebruiker (geselecteerde optie)
+     process_user_response(user_response) 
+
+--   Locatie2: 
+--   Haal gebruikersgegevens op op basis van de opgegeven gebruikerscode
+     SELECT * FROM USERS WHERE code = :user_code; 
+
+--   Haal vragen op op basis van de opgegeven locatie (Locatie 2)
+     SELECT * FROM QUESTIONS WHERE location_id = :location_2_id;
