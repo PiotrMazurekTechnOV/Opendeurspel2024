@@ -32,7 +32,7 @@ app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-//INSERT sql querry test
+//Users toevoegen
 app.post("/api/user/add", async (req, res) => {
   try {
     console.log(req.body);
@@ -51,7 +51,23 @@ app.post("/api/user/add", async (req, res) => {
     res.json({ error: err.message });
   }
 });
+//score toevoegen
+app.post("/api/score/add", async (req, res) => {
+  try {
+    const con = await connect();
 
+    const {score,question_id,user_id} = req.body;
+    const [results, fields] = await con.execute(
+      "INSERT INTO score (score,question_id,user_id ) VALUES (?, ?,?)",
+      [score,question_id,user_id]
+    );
+
+    res.json("answers added successfully");
+  } catch (err) {
+    res.json({ error: err.message });
+  }
+});
+//Locatie toevoegen
 app.post("/api/location/add", async (req, res) => {
   try {
     
@@ -71,7 +87,7 @@ app.post("/api/location/add", async (req, res) => {
   }
 });
 
-
+//question toevoegen
 app.post("/api/questions/add", async (req, res) => {
   try {
     const con = await connect();
@@ -88,7 +104,7 @@ app.post("/api/questions/add", async (req, res) => {
   }
 });
 
-
+//Antwoorden toevoegen
 app.post("/api/answers/add", async (req, res) => {
   try {
     const con = await connect();
@@ -106,7 +122,7 @@ app.post("/api/answers/add", async (req, res) => {
 });
 
 
-// simple route
+// Question verkrijgen
 app.get("/api/questions", async (req, res) => {
   try {
     const con = await connect();
@@ -118,6 +134,7 @@ app.get("/api/questions", async (req, res) => {
   }
   
 }); 
+//user verkrijgen
 app.get("/api/users", async (req, res) => {
   try {
     const con = await connect();
@@ -128,7 +145,7 @@ app.get("/api/users", async (req, res) => {
     res.json(err)
   }
 }); 
-
+//anwser verkrijgen
 app.get("/api/answers", async (req, res) => {
   try {
     const con = await connect();
@@ -139,7 +156,7 @@ app.get("/api/answers", async (req, res) => {
     res.json(err)
   }
 }); 
-
+//location toevoegen
 app.get("/api/locations", async (req, res) => {
   try {
     const con = await connect();
@@ -150,7 +167,7 @@ app.get("/api/locations", async (req, res) => {
     res.json(err)
   }
 }); 
-
+//score verkrijgen
 app.get("/api/score", async (req, res) => {
   try {
     const con = await connect();
@@ -161,32 +178,8 @@ app.get("/api/score", async (req, res) => {
     res.json(err)
   }
 }); 
-app.get("/api/locations", async (req, res) => {
-  try {
-    const con = await connect();
-    const [results, fields] = await con.execute("SELECT * FROM locations")
-    res.json(results)
-  }
-  catch (err){
-    res.json(err)
-  }
-}); 
 
-app.get("/api/score", async (req, res) => {
-  try {
-    const con = await connect();
-    const [results, fields] = await con.execute("SELECT * FROM score")
-    res.json(results)
-  }
-  catch (err){
-    res.json(err)
-  }
-});
-
-
-
-
-
+//users verkrijgen op basis van code
 app.get("/api/user/:code", async (req, res) => {
   try {
     const con = await connect();
@@ -202,7 +195,7 @@ app.get("/api/user/:code", async (req, res) => {
 }); 
 
 
-
+//test get
 app.get("/api/test", (req, res) => {
   console.log("test");
   res.json("test");
