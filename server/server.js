@@ -114,6 +114,21 @@ app.get("/api/users", async (req, res) => {
 }); 
 
 
+app.get("/api/user/:code", async (req, res) => {
+  try {
+    const con = await connect();
+    const code = req.params.code;
+    const [results, fields] = await con.execute("SELECT * FROM users WHERE code = ?", [code] );
+
+    res.json(code)
+  }
+  catch (err){
+    res.json(err)
+  }
+  
+}); 
+
+
 
 app.get("/api/test", (req, res) => {
   console.log("test");
