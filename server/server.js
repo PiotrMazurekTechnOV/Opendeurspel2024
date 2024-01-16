@@ -30,6 +30,27 @@ app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
+//INSERT sql querry test
+app.post("/api/Users/add", async (req, res) => {
+  try {
+    const con = await connect();
+
+    
+    const { age, tel, email } = req.body;
+
+    
+    const [results, fields] = await con.execute(
+      "INSERT INTO users (age, tel, email) VALUES (?, ?, ?)",
+      [age, tel, email]
+    );
+
+    res.json({ message: "User added successfully", userId: results.insertId });
+  } catch (err) {
+    res.json({ error: err.message });
+  }
+});
+
+
 // simple route
 app.get("/api/questions", async (req, res) => {
   try {
