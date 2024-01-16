@@ -1,0 +1,6 @@
+Documentatie Database Import
+- Open Mysql Workbench
+- Druk op Administration en klick op data import
+- Selecteer "import from self-contained file"
+- Selecteer het bestand en import
+
