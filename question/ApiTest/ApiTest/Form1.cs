@@ -89,6 +89,35 @@ namespace ApiTest
 
             return jsonResponse;
         }
+
+        private async void locationTestBtn_Click(object sender, EventArgs e)
+        {
+            var response = await AddLocation("ICT", "112");
+
+            MessageBox.Show(response);
+        }
+
+        static async Task<string> AddLocation(string nameN, string roomN)
+        {
+            Location location = new Location
+            {
+                room = roomN,
+                name = nameN
+            };
+
+            StringContent json = new StringContent(JsonConvert.SerializeObject(location, Formatting.Indented), Encoding.UTF8,
+        "application/json");
+
+            var response = await client.PostAsync(
+                "location/add",
+                json);
+
+            response.EnsureSuccessStatusCode();
+
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+
+            return jsonResponse;
+        }
     }
 
 
@@ -109,6 +138,14 @@ namespace ApiTest
         public string text { get; set; }
 
         public int location_id { get; set; }
+
+    }
+
+    public class Location
+    {
+        public string name { get; set; }
+
+        public string room { get; set; }
 
     }
 }
