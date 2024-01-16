@@ -5,6 +5,8 @@ require('dotenv').config()
 const app = express();
 const mysql = require('mysql2/promise');
 
+let code = 99;
+
 // Create the connection to database
 async function  connect()
 {
@@ -31,20 +33,20 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //INSERT sql querry test
-app.post("/api/Users/add", async (req, res) => {
+app.post("/api/user/add", async (req, res) => {
   try {
+    console.log(req.body);
     const con = await connect();
 
     
-    const { age, tel, email } = req.body;
-
-    
+    const { firstName, lastName, age, interest, email, consent } = req.body;
+    code += 1;
     const [results, fields] = await con.execute(
-      "INSERT INTO users (age, tel, email) VALUES (?, ?, ?)",
-      [age, tel, email]
+      "INSERT INTO users (firstName, lastName, age, interest, email, consent, code) VALUES (?, ?, ?, ?, ?, ?, ?)",
+      [firstName, lastName, age, interest, email, consent, code]
     );
 
-    res.json({ message: "User added successfully", userId: results.insertId });
+    res.json("User added successfully");
   } catch (err) {
     res.json({ error: err.message });
   }
