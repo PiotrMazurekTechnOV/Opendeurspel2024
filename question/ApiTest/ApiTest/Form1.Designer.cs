@@ -30,6 +30,7 @@
         {
             this.testBtn = new System.Windows.Forms.Button();
             this.addUserBtn = new System.Windows.Forms.Button();
+            this.locationTestBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // testBtn
@@ -52,11 +53,22 @@
             this.addUserBtn.UseVisualStyleBackColor = true;
             this.addUserBtn.Click += new System.EventHandler(this.addUserBtn_Click);
             // 
+            // locationTestBtn
+            // 
+            this.locationTestBtn.Location = new System.Drawing.Point(628, 191);
+            this.locationTestBtn.Name = "locationTestBtn";
+            this.locationTestBtn.Size = new System.Drawing.Size(75, 23);
+            this.locationTestBtn.TabIndex = 2;
+            this.locationTestBtn.Text = "button1";
+            this.locationTestBtn.UseVisualStyleBackColor = true;
+            this.locationTestBtn.Click += new System.EventHandler(this.locationTestBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.locationTestBtn);
             this.Controls.Add(this.addUserBtn);
             this.Controls.Add(this.testBtn);
             this.Name = "Form1";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button testBtn;
         private System.Windows.Forms.Button addUserBtn;
+        private System.Windows.Forms.Button locationTestBtn;
     }
 }
 
