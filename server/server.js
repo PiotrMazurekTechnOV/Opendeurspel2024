@@ -53,6 +53,23 @@ app.post("/api/user/add", async (req, res) => {
 });
 
 
+app.post("/api/questions/add", async (req, res) => {
+  try {
+    const con = await connect();
+
+    const { text, location_id,  } = req.body;
+    const [results, fields] = await con.execute(
+      "INSERT INTO users (text, location_id) VALUES (?, ?)",
+      [text, location_id]
+    );
+
+    res.json("question added successfully");
+  } catch (err) {
+    res.json({ error: err.message });
+  }
+});
+
+
 // simple route
 app.get("/api/questions", async (req, res) => {
   try {
@@ -65,6 +82,8 @@ app.get("/api/questions", async (req, res) => {
   }
   
 }); 
+
+
 
 app.get("/api/test", (req, res) => {
   console.log("test");
