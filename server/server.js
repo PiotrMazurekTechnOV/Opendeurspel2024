@@ -89,6 +89,23 @@ app.post("/api/questions/add", async (req, res) => {
 });
 
 
+app.post("/api/answers/add", async (req, res) => {
+  try {
+    const con = await connect();
+
+    const {answers, question_id } = req.body;
+    const [results, fields] = await con.execute(
+      "INSERT INTO users (answers, question_id ) VALUES (?, ?)",
+      [text, location_id]
+    );
+
+    res.json("answers added successfully");
+  } catch (err) {
+    res.json({ error: err.message });
+  }
+});
+
+
 // simple route
 app.get("/api/questions", async (req, res) => {
   try {
