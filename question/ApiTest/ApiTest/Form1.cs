@@ -45,12 +45,15 @@ namespace ApiTest
         static async Task<string> GetTest()
         {
             string test = null;
-            var res = await client.GetAsync("test");
+            var res = await client.GetAsync("questions");
+            var jsonResponse = await res.Content.ReadAsStringAsync();
+            MessageBox.Show($"{jsonResponse}");
+
             if (res.IsSuccessStatusCode)
             {
                 test = await res.Content.ReadAsAsync<string>();
             }
-            return test;
+            return jsonResponse;
         }
 
 
