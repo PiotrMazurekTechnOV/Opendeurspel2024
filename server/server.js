@@ -110,8 +110,43 @@ app.get("/api/users", async (req, res) => {
   catch (err){
     res.json(err)
   }
-  
 }); 
+
+app.get("/api/answers", async (req, res) => {
+  try {
+    const con = await connect();
+    const [results, fields] = await con.execute("SELECT * FROM answers")
+    res.json(results)
+  }
+  catch (err){
+    res.json(err)
+  }
+}); 
+
+app.get("/api/locations", async (req, res) => {
+  try {
+    const con = await connect();
+    const [results, fields] = await con.execute("SELECT * FROM locations")
+    res.json(results)
+  }
+  catch (err){
+    res.json(err)
+  }
+}); 
+
+app.get("/api/score", async (req, res) => {
+  try {
+    const con = await connect();
+    const [results, fields] = await con.execute("SELECT * FROM score")
+    res.json(results)
+  }
+  catch (err){
+    res.json(err)
+  }
+}); 
+
+
+
 
 
 
