@@ -144,6 +144,18 @@ app.get("/api/score", async (req, res) => {
     res.json(err)
   }
 }); 
+app.get("/api/locations", async (req, res) => {
+  try {
+    const con = await connect();
+    const [results, fields] = await con.execute("SELECT * FROM locations")
+    res.json(results)
+  }
+  catch (err){
+    res.json(err)
+  }
+}); 
+
+
 
 
 
