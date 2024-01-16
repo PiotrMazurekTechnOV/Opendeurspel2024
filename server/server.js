@@ -101,6 +101,17 @@ app.get("/api/questions", async (req, res) => {
   }
   
 }); 
+app.get("/api/users", async (req, res) => {
+  try {
+    const con = await connect();
+    const [results, fields] = await con.execute("SELECT * FROM users")
+    res.json(results)
+  }
+  catch (err){
+    res.json(err)
+  }
+  
+}); 
 
 
 
