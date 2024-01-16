@@ -1,16 +1,21 @@
 const express = require("express");
 const cors = require("cors");
+require('dotenv').config()
 
 const app = express();
-const mysql = require("mysql");
-const dbConfig = require("./db.js");
+const mysql = require('mysql2/promise');
 
-const con = mysql.createConnection({
-    host: dbConfig.HOST,
-    user: dbConfig.USER,
-    password: dbConfig.PASSWORD,
-    database: dbConfig.DB
+// Create the connection to database
+async function  connect()
+{
+  const con = await mysql.createConnection({
+    host: process.env.HOST,
+    user: process.env.USER,
+    database: process.env.DB,
+    password: process.env.PASSWORD
   });
+  return con;
+}
 
 
 var corsOptions = {
@@ -26,14 +31,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // simple route
-app.get("/api/questions", (req, res) => {
-    con.connect(function(err) {
-        if (err) throw err;
-        con.query("SELECT * FROM questions", function (err, result, fields) {
-          if (err) throw err;
-          res.json(result)
-        });
-      });
+app.get("/api/questions", async (req, res) => {
+  try {
+    const con = await connect();
+    const [results, fields] = await con.execute("SELECT * FROM questions")
+    res.json(results)
+  }
+  catch (err){
+    res.json(err)
+  }
+  
 }); 
 
 app.get("/api/test", (req, res) => {

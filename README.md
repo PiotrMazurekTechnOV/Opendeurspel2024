@@ -120,3 +120,12 @@ Na een paar commits:
 - pull request naar branch
 - druk op current branch -> pull requests -> create a pull request
 - github in browser wordt geopend en druk op create pull request
+
+
+## Documentatie Database Import
+
+- Open Mysql
+- Druk op Administration en klick op data import
+- Selecteer imoport van self-contained file
+- Selecteer het bestand en export
+
