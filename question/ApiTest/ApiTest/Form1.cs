@@ -33,7 +33,12 @@ namespace ApiTest
         {
             try
             {
-                MessageBox.Show(await GetTest());
+                List<Question> list = await GetTest();
+                foreach(Question question in list)
+                {
+                    MessageBox.Show(question.text + " " + question.location_id);
+
+                }
 
             }
             catch(Exception ex)
@@ -42,20 +47,68 @@ namespace ApiTest
             }
         }
 
-        static async Task<string> GetTest()
-        {
-            string test = null;
-            var res = await client.GetAsync("questions");
-            var jsonResponse = await res.Content.ReadAsStringAsync();
-            MessageBox.Show($"{jsonResponse}");
+       
 
-            if (res.IsSuccessStatusCode)
-            {
-                test = await res.Content.ReadAsAsync<string>();
-            }
-            return jsonResponse;
+        private async void addUserBtn_Click(object sender, EventArgs e)
+        {
+            var response = await AddUser("test", "test2", 20, true, "testtest", "test@test.com");
+
+            MessageBox.Show(response);
         }
 
+        static async Task<List<Question>> GetTest()
+        {
+            var res = await client.GetAsync("questions");
+            var jsonResponse = await res.Content.ReadAsStringAsync();
+            List<Question> questionList = JsonConvert.DeserializeObject<List<Question>>(jsonResponse);
+
+            return questionList;
+        }
+        static async Task<string> AddUser(string firstNameN, string lastNameN, int ageN, bool consentN, string interestN, string emailN)
+        {
+            User user = new User
+            {
+                firstName = firstNameN,
+                lastName = lastNameN,
+                age = ageN,
+                consent = consentN,
+                interest = interestN,
+                email = emailN
+            };
+
+            StringContent json = new StringContent(JsonConvert.SerializeObject(user, Formatting.Indented), Encoding.UTF8,
+        "application/json");
+
+            var response = await client.PostAsync(
+                "user/add",
+                json);
+
+            response.EnsureSuccessStatusCode();
+
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+
+            return jsonResponse;
+        }
+    }
+
+
+
+    public class User
+    {
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public int age { get; set; }
+        public bool consent { get; set; }
+        public string email { get; set; }
+        public string interest { get; set; }
+
+    }
+
+    public class Question
+    {
+        public string text { get; set; }
+
+        public int location_id { get; set; }
 
     }
 }
