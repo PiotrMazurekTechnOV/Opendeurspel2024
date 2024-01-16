@@ -32,7 +32,7 @@ app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-//INSERT sql querry test
+//Een user toevoegen
 app.post("/api/user/add", async (req, res) => {
   try {
     console.log(req.body);
@@ -51,7 +51,7 @@ app.post("/api/user/add", async (req, res) => {
     res.json({ error: err.message });
   }
 });
-
+//Een locatie Toevoegen
 app.post("/api/location/add", async (req, res) => {
   try {
     
@@ -71,7 +71,7 @@ app.post("/api/location/add", async (req, res) => {
   }
 });
 
-
+//Een vraag toevoegen
 app.post("/api/questions/add", async (req, res) => {
   try {
     const con = await connect();
@@ -89,7 +89,7 @@ app.post("/api/questions/add", async (req, res) => {
 });
 
 
-// simple route
+//Vragen verkrijgen
 app.get("/api/questions", async (req, res) => {
   try {
     const con = await connect();
@@ -101,6 +101,7 @@ app.get("/api/questions", async (req, res) => {
   }
   
 }); 
+//Users verkrijgen
 app.get("/api/users", async (req, res) => {
   try {
     const con = await connect();
@@ -111,7 +112,7 @@ app.get("/api/users", async (req, res) => {
     res.json(err)
   }
 }); 
-
+//Antwoorden verkrijgen
 app.get("/api/answers", async (req, res) => {
   try {
     const con = await connect();
@@ -122,7 +123,7 @@ app.get("/api/answers", async (req, res) => {
     res.json(err)
   }
 }); 
-
+//Locaties verkrijgen
 app.get("/api/locations", async (req, res) => {
   try {
     const con = await connect();
@@ -133,7 +134,7 @@ app.get("/api/locations", async (req, res) => {
     res.json(err)
   }
 }); 
-
+//score verkrijgen
 app.get("/api/score", async (req, res) => {
   try {
     const con = await connect();
@@ -144,33 +145,13 @@ app.get("/api/score", async (req, res) => {
     res.json(err)
   }
 }); 
-app.get("/api/locations", async (req, res) => {
-  try {
-    const con = await connect();
-    const [results, fields] = await con.execute("SELECT * FROM locations")
-    res.json(results)
-  }
-  catch (err){
-    res.json(err)
-  }
-}); 
-
-app.get("/api/score", async (req, res) => {
-  try {
-    const con = await connect();
-    const [results, fields] = await con.execute("SELECT * FROM score")
-    res.json(results)
-  }
-  catch (err){
-    res.json(err)
-  }
-});
 
 
 
 
 
 
+//test code
 app.get("/api/test", (req, res) => {
   console.log("test");
   res.json("test");
