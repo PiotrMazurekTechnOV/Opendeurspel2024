@@ -156,6 +156,19 @@ app.get("/api/answers", async (req, res) => {
     res.json(err)
   }
 }); 
+
+//anwser verkrijgen van specifieke vraag
+app.get("/api/answers/:questionId", async (req, res) => {
+  try {
+    const question_id = req.params.questionId;
+    const con = await connect();
+    const [results, fields] = await con.execute("SELECT * FROM answers WHERE question_id = " + question_id);
+    res.json(results)
+  }
+  catch (err){
+    res.json(err)
+  }
+}); 
 //location toevoegen
 app.get("/api/locations", async (req, res) => {
   try {
