@@ -95,5 +95,14 @@
   <ItemGroup>
     <None Include="Resources\Purple and Green Modern ICT Computer Parts Classroom Quiz %282%29.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple and Green Modern ICT Computer Parts Classroom Quiz %282%291.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple and Green Modern ICT Computer Parts Classroom Quiz %284%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple and Green Modern ICT Computer Parts Classroom Quiz %285%29.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

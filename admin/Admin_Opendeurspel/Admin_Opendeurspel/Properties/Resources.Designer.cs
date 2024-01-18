@@ -79,5 +79,35 @@ namespace Admin_Opendeurspel.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("Purple and Green Modern ICT Computer Parts Classroom Quiz (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Purple and Green Modern ICT Computer Parts Classroom Quiz (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Purple and Green Modern ICT Computer Parts Classroom Quiz (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

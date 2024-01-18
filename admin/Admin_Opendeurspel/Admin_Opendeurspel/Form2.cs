@@ -22,6 +22,20 @@ namespace Admin_Opendeurspel
             this.WindowState = FormWindowState.Minimized;//zet het fullscreen
             this.FormBorderStyle = FormBorderStyle.None;//verwijdert de borders
             this.Bounds = Screen.PrimaryScreen.Bounds;//zet het op de borders van jou scherm
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage ;
+            questionLbl.Text = "test";
+            questionLbl.Location = new Point(pictureBox2.Width/2, pictureBox2.Height/3);
+            questionLbl.Font = new Font("Calibri", 18);
+            questionLbl.AutoSize = true;
+            this.questionLbl.Parent = this.pictureBox2;
+            this.questionLbl.BackColor = Color.Transparent;
+            questionLbl.Padding = new Padding(6);
+            this.Controls.Add(questionLbl);
+            questionLbl.Location = new Point(pictureBox2.Width / 2, pictureBox2.Height / 3);
+            questionLbl.BringToFront();
+
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
