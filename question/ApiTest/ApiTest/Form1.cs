@@ -29,12 +29,12 @@ namespace ApiTest
                 new MediaTypeWithQualityHeaderValue("application/json"));
 
         }
-
+        //opvragen van alle questions en in een listbox
         private async void testBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                List<Question> list = await GetTest();
+                List<Question> list = await GetQuestions();
                 foreach(Question question in list)
                 {
                     questionsLstBx.Items.Add(question.id + " " + question.location_id + " " + question.text);
@@ -57,7 +57,7 @@ namespace ApiTest
             MessageBox.Show(response);
         }
 
-        static async Task<List<Question>> GetTest()
+        static async Task<List<Question>> GetQuestions()
         {
             var res = await client.GetAsync("questions");
             var jsonResponse = await res.Content.ReadAsStringAsync();
@@ -138,6 +138,7 @@ namespace ApiTest
             }
         }
 
+        //opvragen van answers op basis van question ID
         static async Task<List<Answer>> GetAnswersForQuestion(int question_id)
         {
             var res = await client.GetAsync("answers/" + question_id);
@@ -155,6 +156,7 @@ namespace ApiTest
             MessageBox.Show(selectedId);
         }
 
+        //wanneer je op een question drukt -> answers opvragen
         private async void questionsLstBx_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selected = (string)questionsLstBx.SelectedItem;
