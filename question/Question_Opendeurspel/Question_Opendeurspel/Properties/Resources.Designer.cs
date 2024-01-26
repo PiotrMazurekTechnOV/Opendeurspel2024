@@ -59,5 +59,35 @@ namespace Question_Opendeurspel.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Purple and Green Modern ICT Computer Parts Classroom Quiz (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Purple and Green Modern ICT Computer Parts Classroom Quiz (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Purple and Green Modern ICT Computer Parts Classroom Quiz (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
