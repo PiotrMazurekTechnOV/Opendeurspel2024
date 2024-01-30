@@ -40,9 +40,10 @@
             // 
             // testBtn
             // 
-            this.testBtn.Location = new System.Drawing.Point(38, 157);
+            this.testBtn.Location = new System.Drawing.Point(28, 128);
+            this.testBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.testBtn.Name = "testBtn";
-            this.testBtn.Size = new System.Drawing.Size(120, 23);
+            this.testBtn.Size = new System.Drawing.Size(90, 19);
             this.testBtn.TabIndex = 0;
             this.testBtn.Text = "Get Questions";
             this.testBtn.UseVisualStyleBackColor = true;
@@ -50,9 +51,10 @@
             // 
             // addUserBtn
             // 
-            this.addUserBtn.Location = new System.Drawing.Point(578, 37);
+            this.addUserBtn.Location = new System.Drawing.Point(434, 30);
+            this.addUserBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addUserBtn.Name = "addUserBtn";
-            this.addUserBtn.Size = new System.Drawing.Size(153, 23);
+            this.addUserBtn.Size = new System.Drawing.Size(115, 19);
             this.addUserBtn.TabIndex = 1;
             this.addUserBtn.Text = "Add test user";
             this.addUserBtn.UseVisualStyleBackColor = true;
@@ -60,9 +62,10 @@
             // 
             // locationTestBtn
             // 
-            this.locationTestBtn.Location = new System.Drawing.Point(618, 361);
+            this.locationTestBtn.Location = new System.Drawing.Point(464, 293);
+            this.locationTestBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.locationTestBtn.Name = "locationTestBtn";
-            this.locationTestBtn.Size = new System.Drawing.Size(75, 23);
+            this.locationTestBtn.Size = new System.Drawing.Size(56, 19);
             this.locationTestBtn.TabIndex = 2;
             this.locationTestBtn.Text = "button1";
             this.locationTestBtn.UseVisualStyleBackColor = true;
@@ -71,28 +74,29 @@
             // questionsLstBx
             // 
             this.questionsLstBx.FormattingEnabled = true;
-            this.questionsLstBx.ItemHeight = 16;
-            this.questionsLstBx.Location = new System.Drawing.Point(38, 67);
+            this.questionsLstBx.Location = new System.Drawing.Point(28, 54);
+            this.questionsLstBx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.questionsLstBx.Name = "questionsLstBx";
-            this.questionsLstBx.Size = new System.Drawing.Size(120, 84);
+            this.questionsLstBx.Size = new System.Drawing.Size(91, 69);
             this.questionsLstBx.TabIndex = 3;
             this.questionsLstBx.SelectedIndexChanged += new System.EventHandler(this.questionsLstBx_SelectedIndexChanged);
             // 
             // answersLstBx
             // 
             this.answersLstBx.FormattingEnabled = true;
-            this.answersLstBx.ItemHeight = 16;
-            this.answersLstBx.Location = new System.Drawing.Point(215, 67);
+            this.answersLstBx.Location = new System.Drawing.Point(161, 54);
+            this.answersLstBx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.answersLstBx.Name = "answersLstBx";
-            this.answersLstBx.Size = new System.Drawing.Size(120, 84);
+            this.answersLstBx.Size = new System.Drawing.Size(91, 69);
             this.answersLstBx.TabIndex = 5;
             this.answersLstBx.SelectedIndexChanged += new System.EventHandler(this.answersLstBx_SelectedIndexChanged);
             // 
             // answerBtn
             // 
-            this.answerBtn.Location = new System.Drawing.Point(215, 157);
+            this.answerBtn.Location = new System.Drawing.Point(161, 128);
+            this.answerBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.answerBtn.Name = "answerBtn";
-            this.answerBtn.Size = new System.Drawing.Size(120, 23);
+            this.answerBtn.Size = new System.Drawing.Size(90, 19);
             this.answerBtn.TabIndex = 4;
             this.answerBtn.Text = "Get answers";
             this.answerBtn.UseVisualStyleBackColor = true;
@@ -101,18 +105,19 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 214);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 174);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(180, 122);
             this.dataGridView1.TabIndex = 6;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.answersLstBx);
             this.Controls.Add(this.answerBtn);
@@ -120,6 +125,7 @@
             this.Controls.Add(this.locationTestBtn);
             this.Controls.Add(this.addUserBtn);
             this.Controls.Add(this.testBtn);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
