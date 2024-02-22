@@ -72,6 +72,9 @@ namespace Admin_Opendeurspel
                 EnterBtn.Visible = false;
                 pictureBox2.Visible = true;
                 questionLbl.Visible = true;
+                button1.Visible = true;
+                button2.Visible = true;
+                button3.Visible = true;
             }
         }
 
@@ -89,26 +92,69 @@ namespace Admin_Opendeurspel
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Juist Antwoord");
+            pictureBox1.Visible = true;
+            textBox1.Visible = true;
+            EnterBtn.Visible = true;
+            pictureBox2.Visible = false;
+            questionLbl.Visible = false;
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            textBox1.Text = "";
         }
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Fout Antwoord");
+            pictureBox1.Visible = true;
+            textBox1.Visible = true;
+            EnterBtn.Visible = true;
+            pictureBox2.Visible = false;
+            questionLbl.Visible = false;
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            textBox1.Text = "";
         }
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Fout Antwoord");
+            pictureBox1.Visible = true;
+            textBox1.Visible = true;
+            EnterBtn.Visible = true;
+            pictureBox2.Visible = false;
+            questionLbl.Visible = false;
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            textBox1.Text = "";
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Fout Antwoord");
-
+            pictureBox1.Visible = true;
+            textBox1.Visible = true;
+            EnterBtn.Visible = true;
+            pictureBox2.Visible = false;
+            questionLbl.Visible = false;
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            textBox1.Text = "";
         }
-
+        
         private void button3_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Fout Antwoord");
-
+            pictureBox1.Visible = true;
+            textBox1.Visible = true;
+            EnterBtn.Visible = true;
+            pictureBox2.Visible = false;
+            questionLbl.Visible = false;
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            textBox1.Text = "";
         }
     }
 }
