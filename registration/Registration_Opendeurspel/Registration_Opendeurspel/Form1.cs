@@ -42,14 +42,12 @@ namespace Registration_Opendeurspel
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             this.textBox1.AutoSize = false;
-            this.textBox1.Size = new System.Drawing.Size(200, 60);
-            int percentage3 = 112;
-            int percentage4 = 185;
-            int parentWidth2 = this.ClientSize.Width;
-            int parentHeight2 = this.ClientSize.Height;
-            int newX1 = (parentWidth2 * percentage3) / 100;
-            int newY1 = (parentHeight2 * percentage4) / 100;
-            this.textBox1.Location = new Point(newX, newY);
+            this.textBox1.Size = new System.Drawing.Size(475, 155);
+            int percentage3 = 90;
+            int percentage4 = 140;
+            int newX1 = (parentWidth * percentage3) / 100;
+            int newY1 = (parentHeight * percentage4) / 100;
+            this.textBox1.Location = new Point(newX1, newY1);
         }
     }
 }
