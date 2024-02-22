@@ -30,8 +30,8 @@ namespace Registration_Opendeurspel
             InschrijfBtn.ForeColor = Color.Red;
             InschrijfBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
             InschrijfBtn.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            int percentage = 29;
-            int percentage2 = 74;
+            int percentage = 112;
+            int percentage2 = 185;
             int parentWidth = this.ClientSize.Width;
             int parentHeight = this.ClientSize.Height;
             int newX = (parentWidth * percentage) / 100;
@@ -41,6 +41,15 @@ namespace Registration_Opendeurspel
             this.FormBorderStyle = FormBorderStyle.None;
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.textBox1.AutoSize = false;
+            this.textBox1.Size = new System.Drawing.Size(200, 60);
+            int percentage3 = 112;
+            int percentage4 = 185;
+            int parentWidth2 = this.ClientSize.Width;
+            int parentHeight2 = this.ClientSize.Height;
+            int newX1 = (parentWidth2 * percentage3) / 100;
+            int newY1 = (parentHeight2 * percentage4) / 100;
+            this.textBox1.Location = new Point(newX, newY);
         }
     }
 }
