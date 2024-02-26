@@ -26,3 +26,6 @@ C:\Users\PiotrMazurek\Documents\Opendeurspel2024\registration\Registration_Opend
 C:\Users\PiotrMazurek\Documents\Opendeurspel2024\registration\Registration_Opendeurspel\Registration_Opendeurspel\bin\Debug\Registration_Opendeurspel.exe
 C:\Users\PiotrMazurek\Documents\Opendeurspel2024\registration\Registration_Opendeurspel\Registration_Opendeurspel\bin\Debug\Registration_Opendeurspel.pdb
 >>>>>>> 960576529009ca59d0783c2ca0f63f2b2a791fc2
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\Registration_Opendeurspel\Registration_Opendeurspel\bin\Debug\ReaLTaiizor.dll
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\Registration_Opendeurspel\Registration_Opendeurspel\bin\Debug\ReaLTaiizor.xml
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\Registration_Opendeurspel\Registration_Opendeurspel\obj\Debug\Registration_Opendeurspel.csproj.CopyComplete

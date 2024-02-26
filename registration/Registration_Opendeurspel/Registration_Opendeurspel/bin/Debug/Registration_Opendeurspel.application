@@ -4,17 +4,17 @@
   <description asmv2:publisher="Registration_Opendeurspel" asmv2:product="Registration_Opendeurspel" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Registration_Opendeurspel.exe.manifest" size="3559">
+    <dependentAssembly dependencyType="install" codebase="Registration_Opendeurspel.exe.manifest" size="4202">
       <assemblyIdentity name="Registration_Opendeurspel.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UZpuh4SXoTOKSanyszHT4/xNDuTamEABJ1kiC4+Nyro=</dsig:DigestValue>
+        <dsig:DigestValue>KEeapCYcX6h1pReVTK8S9l9k+aUiNzaQdy+7dj07V+g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
