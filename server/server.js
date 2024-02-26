@@ -160,20 +160,6 @@ app.get("/api/users", async (req, res) => {
     res.json(err)
   }
 }); 
-
-//user verkrijgen
-app.get("/api/user/:code", async (req, res) => {
-  try {
-    const con = await connect();
-    const [results, fields] = await con.execute("SELECT * FROM users")
-    res.json(results)
-  }
-  catch (err){
-    res.json(err)
-  }
-}); 
-
-
 //anwser verkrijgen
 app.get("/api/answers", async (req, res) => {
   try {
@@ -226,12 +212,12 @@ app.get("/api/score", async (req, res) => {
 
 //users verkrijgen op basis van code
 app.get("/api/user/:code", async (req, res) => {
-  console.log("test");
   try {
-    const code = req.params.code;
     const con = await connect();
-    const [results, fields] = await con.execute("SELECT * FROM users WHERE code = " + code);
-    res.json(results);
+    const code = req.params.code;
+    const [results, fields] = await con.execute("SELECT * FROM users WHERE code = ?", [code] );
+    
+    res.json(results)
   }
   catch (err){
     res.json(err)
@@ -247,7 +233,7 @@ app.get("/api/test", (req, res) => {
 }); 
 
 // set port, listen for requests
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
