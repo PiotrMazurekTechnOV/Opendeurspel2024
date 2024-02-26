@@ -4,17 +4,26 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace Admin_Opendeurspel
 {
     public partial class Form2 : Form
     {
+        static HttpClient client;
         public Form2()
         {
             InitializeComponent();
+            client = new HttpClient();
+            client.BaseAddress = new Uri("http://192.168.0.144/api/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -63,19 +72,32 @@ namespace Admin_Opendeurspel
 
         }
 
-        private void EnterBtn_Click(object sender, EventArgs e)
+        private async void EnterBtn_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "1")
+            try
             {
-                pictureBox1.Visible = false;
-                textBox1.Visible = false;
-                EnterBtn.Visible = false;
-                pictureBox2.Visible = true;
-                questionLbl.Visible = true;
-                button1.Visible = true;
-                button2.Visible = true;
-                button3.Visible = true;
+                User user = await GetUserByCode();
+                if(user != null)
+                {
+                    questionLbl.Text = "Dag " + user.firstName + ", \n hoeveel onderbroeken draagth John Doe";
+
+                    pictureBox1.Visible = false;
+                    textBox1.Visible = false;
+                    EnterBtn.Visible = false;
+                    pictureBox2.Visible = true;
+                    questionLbl.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true;
+                }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+
+            
         }
 
 
@@ -156,5 +178,86 @@ namespace Admin_Opendeurspel
             button3.Visible = false;
             textBox1.Text = "";
         }
+        //opvragen van answers op basis van question ID
+        static async Task<List<Answer>> GetAnswersForQuestion(int question_id)
+
+        {
+
+            var res = await client.GetAsync("answers/" + question_id);
+
+            var jsonResponse = await res.Content.ReadAsStringAsync();
+
+            List<Answer> answerList = JsonConvert.DeserializeObject<List<Answer>>(jsonResponse);
+
+            return answerList;
+
+        }
+
+        private async Task<User> GetUserByCode()
+        {
+            int code = Convert.ToInt32(textBox1.Text);
+            var res = await client.GetAsync("user/" + code);
+
+            var jsonResponse = await res.Content.ReadAsStringAsync();
+            MessageBox.Show(jsonResponse);
+            User user = JsonConvert.DeserializeObject<User>(jsonResponse);
+
+
+            return user;
+
+
+        }
     }
+
+    public class User
+    {
+        public int id { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public int age { get; set; }
+        public bool consent { get; set; }
+        public string email { get; set; }
+        public string interest { get; set; }
+        public string code { get; set; }
+
+    }
+
+    public class Question
+    {
+        public int id { get; set; }
+        public string text { get; set; }
+
+        public int location_id { get; set; }
+
+    }
+    public class Answer
+    {
+        public int id { get; set; }
+        public string answer { get; set; }
+
+        public int question_id { get; set; }
+        public bool correct { get; set; }
+
+    }
+
+    public class Locations
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+
+        public string room { get; set; }
+
+    }
+    public class Score
+    {
+        public int id { get; set; }
+        public int score { get; set; }
+        public int question_id { get; set; }
+
+        public int user_id { get; set; }
+
+    }
+
+
+
 }

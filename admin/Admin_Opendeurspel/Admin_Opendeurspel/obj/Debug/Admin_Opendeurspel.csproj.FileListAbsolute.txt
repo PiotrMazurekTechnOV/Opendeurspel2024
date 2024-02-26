@@ -10,3 +10,6 @@ C:\Users\ArjenKaekebeke\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem
 C:\Users\ArjenKaekebeke\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.exe
 C:\Users\ArjenKaekebeke\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.pdb
 C:\Users\ArjenKaekebeke\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.Form2.resources
+C:\Users\ArjenKaekebeke\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ArjenKaekebeke\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ArjenKaekebeke\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.csproj.CopyComplete
