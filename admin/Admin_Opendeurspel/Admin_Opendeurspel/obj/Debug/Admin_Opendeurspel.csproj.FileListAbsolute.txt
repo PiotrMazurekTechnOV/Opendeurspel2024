@@ -13,3 +13,17 @@ C:\Users\ArjenKaekebeke\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem
 C:\Users\ArjenKaekebeke\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ArjenKaekebeke\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ArjenKaekebeke\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.csproj.CopyComplete
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\bin\Debug\Admin_Opendeurspel.exe.config
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\bin\Debug\Admin_Opendeurspel.exe
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\bin\Debug\Admin_Opendeurspel.pdb
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\bin\Debug\Newtonsoft.Json.xml
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.csproj.AssemblyReference.cache
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.Form1.resources
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.Form2.resources
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.Properties.Resources.resources
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.csproj.GenerateResource.cache
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.csproj.CoreCompileInputs.cache
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.csproj.CopyComplete
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.exe
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\Admin_Opendeurspel\obj\Debug\Admin_Opendeurspel.pdb

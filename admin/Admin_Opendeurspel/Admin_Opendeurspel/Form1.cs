@@ -15,7 +15,7 @@ namespace Admin_Opendeurspel
 {
     public partial class Form1 : Form
     {
-        static HttpClient client;
+        private HttpClient client;
         public Form1()
         {
             InitializeComponent();
@@ -35,30 +35,49 @@ namespace Admin_Opendeurspel
 
         }
 
-        private void enterBtn_Click(object sender, EventArgs e)
+        private async void enterBtn_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "112")
+            if(textBox1.Text == "")
             {
-                Form2 form2 = new Form2();
-                form2.Show();
-                Hide();
-                this.Closed += (s, args) => Close();
+                MessageBox.Show("Vul een klaslokaal in.");
             }
+            else
+            {
+                try
+                {
+                    Location location = await GetLocationByRoom();
+                    Form2 form2 = new Form2(location);
+                    form2.Show();
+                    Hide();
+                    this.Closed += (s, args) => Close();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+                
+            
         }
 
-        private async Task<Question> GetUserByCode()
+        private async Task<Location> GetLocationByRoom()
         {
-            int code = Convert.ToInt32(textBox1.Text);
-            var res = await client.GetAsync("user/" + code);
-
+            int room = Convert.ToInt32(textBox1.Text);
+            var res = await client.GetAsync("location/" + room);
+            
             var jsonResponse = await res.Content.ReadAsStringAsync();
             MessageBox.Show(jsonResponse);
-            User user = JsonConvert.DeserializeObject<User>(jsonResponse);
+            Location location = JsonConvert.DeserializeObject<Location>(jsonResponse);
 
-
-            return user;
-
-
+            return location;
         }
+    }
+    public class Location
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+
+        public string room { get; set; }
+
     }
 }

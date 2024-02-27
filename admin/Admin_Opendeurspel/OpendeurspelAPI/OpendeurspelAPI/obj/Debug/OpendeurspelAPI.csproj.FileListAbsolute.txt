@@ -1,0 +1,13 @@
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\OpendeurspelAPI.exe.config
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\OpendeurspelAPI.exe
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\OpendeurspelAPI.pdb
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.AssemblyReference.cache
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.Form1.resources
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.Properties.Resources.resources
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.GenerateResource.cache
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.CoreCompileInputs.cache
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.CopyComplete
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.exe
+C:\Users\PiotrMazurek\Documents\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.pdb

@@ -16,7 +16,9 @@ namespace Admin_Opendeurspel
     public partial class Form2 : Form
     {
         static HttpClient client;
-        public Form2()
+        private Location location;
+        private Question question;
+        public Form2(Location location)
         {
             InitializeComponent();
             client = new HttpClient();
@@ -24,10 +26,12 @@ namespace Admin_Opendeurspel
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
+            this.location = location;
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private async void Form2_Load(object sender, EventArgs e)
         {
+            this.question = await GetQuestionByLocation(location.id);
             this.WindowState = FormWindowState.Minimized;//zet het fullscreen
             this.FormBorderStyle = FormBorderStyle.None;//verwijdert de borders
             this.Bounds = Screen.PrimaryScreen.Bounds;//zet het op de borders van jou scherm
@@ -79,7 +83,7 @@ namespace Admin_Opendeurspel
                 User user = await GetUserByCode();
                 if(user != null)
                 {
-                    questionLbl.Text = "Dag " + user.firstName + ", \n hoeveel onderbroeken draagth John Doe";
+                    questionLbl.Text = "Dag " + user.firstName + ", \n " + question.text;
 
                     pictureBox1.Visible = false;
                     textBox1.Visible = false;
@@ -199,14 +203,24 @@ namespace Admin_Opendeurspel
             var res = await client.GetAsync("user/" + code);
 
             var jsonResponse = await res.Content.ReadAsStringAsync();
-            MessageBox.Show(jsonResponse);
             User user = JsonConvert.DeserializeObject<User>(jsonResponse);
 
 
             return user;
-
-
         }
+
+        private async Task<Question> GetQuestionByLocation(int locationId)
+        {
+            var res = await client.GetAsync("question/" + locationId);
+
+            var jsonResponse = await res.Content.ReadAsStringAsync();
+            Question question = JsonConvert.DeserializeObject<Question>(jsonResponse);
+
+
+            return question;
+        }
+
+
     }
 
     public class User
