@@ -40,11 +40,12 @@
             // 
             // InschrijfBtn
             // 
-            this.InschrijfBtn.Location = new System.Drawing.Point(12, 22);
+            this.InschrijfBtn.Location = new System.Drawing.Point(373, 363);
             this.InschrijfBtn.Name = "InschrijfBtn";
-            this.InschrijfBtn.Size = new System.Drawing.Size(270, 68);
+            this.InschrijfBtn.Size = new System.Drawing.Size(63, 32);
             this.InschrijfBtn.TabIndex = 0;
             this.InschrijfBtn.UseVisualStyleBackColor = true;
+            this.InschrijfBtn.Click += new System.EventHandler(this.InschrijfBtn_Click);
             // 
             // textBox1
             // 

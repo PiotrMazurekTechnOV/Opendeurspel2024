@@ -4,9 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Registration_Opendeurspel
 {
@@ -14,12 +18,28 @@ namespace Registration_Opendeurspel
 
     public partial class Form1 : Form
     {
+        static HttpClient client;
         public Form1()
         {
             InitializeComponent();
-           
-        }
+            client = new HttpClient();
+            client.BaseAddress = new Uri("http://192.168.0.144/api/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
 
+        }
+        public class User
+        {
+            public int id { get; set; }
+            public string firstName { get; set; }
+            public string lastName { get; set; }
+            public int age { get; set; }
+            public bool consent { get; set; }
+            public string email { get; set; }
+            public string interest { get; set; }
+            public string code { get; set; }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             InschrijfBtn.Parent = this;
@@ -114,6 +134,46 @@ namespace Registration_Opendeurspel
         private void textBox5_Click(object sender, EventArgs e)
         {
             textBox5.Text = string.Empty;
+        }
+        static async Task<string> AddUser(string firstNameN, string lastNameN, bool consentN, int ageN, string interestN, string emailN)
+        {
+            User user = new User
+            {
+                firstName = firstNameN,
+                lastName = lastNameN,
+                age = ageN,
+                consent = consentN,
+                interest = interestN,
+                email = emailN
+
+
+            };
+            StringContent json = new StringContent(JsonConvert.SerializeObject(user, Formatting.Indented), Encoding.UTF8,
+       "application/json");
+
+            var response = await client.PostAsync(
+                "user/add",
+                json);
+
+            response.EnsureSuccessStatusCode();
+
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+
+            return jsonResponse;
+
+        }
+
+        private async void InschrijfBtn_Click(object sender, EventArgs e)
+        {
+            var response = await AddUser(
+               textBox2.Text, //voornaam
+               textBox3.Text, //familienaam
+               Convert.ToBoolean(checkBox1.Checked), //consent
+               Convert.ToInt32(textBox4.Text), //leeftijd
+               textBox1.Text, //interesse
+               textBox5.Text); //email
+
+            MessageBox.Show(response);
         }
     }
 }

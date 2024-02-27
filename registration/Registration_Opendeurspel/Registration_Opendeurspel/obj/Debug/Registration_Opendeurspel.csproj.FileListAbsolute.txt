@@ -29,3 +29,5 @@ C:\Users\PiotrMazurek\Documents\Opendeurspel2024\registration\Registration_Opend
 C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\Registration_Opendeurspel\Registration_Opendeurspel\bin\Debug\ReaLTaiizor.dll
 C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\Registration_Opendeurspel\Registration_Opendeurspel\bin\Debug\ReaLTaiizor.xml
 C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\Registration_Opendeurspel\Registration_Opendeurspel\obj\Debug\Registration_Opendeurspel.csproj.CopyComplete
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\Registration_Opendeurspel\Registration_Opendeurspel\bin\Debug\Newtonsoft.Json.dll
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\Registration_Opendeurspel\Registration_Opendeurspel\bin\Debug\Newtonsoft.Json.xml

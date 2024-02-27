@@ -42,6 +42,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="711952">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4eJ697B+7t9c5xqSVfBCKBam/FhJpIPGcU4bRyBE+p0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReaLTaiizor.dll" size="10830848">
       <assemblyIdentity name="ReaLTaiizor" version="3.7.9.8" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -54,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Registration_Opendeurspel.exe" size="265192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Registration_Opendeurspel.exe" size="270824">
       <assemblyIdentity name="Registration_Opendeurspel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5VetX2kzfcoP/CZ67hB5BaL1JpHeZ9TQ1+hAmf/Bv3g=</dsig:DigestValue>
+        <dsig:DigestValue>y4zsVX5PRnGxLcG/Ry1P3zyFU49IsrS8/qpgXnLRpLc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -1,0 +1,15 @@
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\bin\Debug\net6.0\WiskundeMetMenneerThijs.exe
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\bin\Debug\net6.0\WiskundeMetMenneerThijs.deps.json
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\bin\Debug\net6.0\WiskundeMetMenneerThijs.runtimeconfig.json
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\bin\Debug\net6.0\WiskundeMetMenneerThijs.dll
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\bin\Debug\net6.0\WiskundeMetMenneerThijs.pdb
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\obj\Debug\net6.0\WiskundeMetMenneerThijs.csproj.AssemblyReference.cache
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\obj\Debug\net6.0\WiskundeMetMenneerThijs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\obj\Debug\net6.0\WiskundeMetMenneerThijs.AssemblyInfoInputs.cache
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\obj\Debug\net6.0\WiskundeMetMenneerThijs.AssemblyInfo.cs
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\obj\Debug\net6.0\WiskundeMetMenneerThijs.csproj.CoreCompileInputs.cache
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\obj\Debug\net6.0\WiskundeMetMenneerThijs.dll
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\obj\Debug\net6.0\refint\WiskundeMetMenneerThijs.dll
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\obj\Debug\net6.0\WiskundeMetMenneerThijs.pdb
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\obj\Debug\net6.0\WiskundeMetMenneerThijs.genruntimeconfig.cache
+C:\Users\YassineEddouks\Documents\GitHub\Opendeurspel2024\registration\WiskundeMetMenneerThijs\WiskundeMetMenneerThijs\obj\Debug\net6.0\ref\WiskundeMetMenneerThijs.dll
