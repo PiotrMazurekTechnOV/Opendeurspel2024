@@ -35,7 +35,6 @@ app.use(express.urlencoded({ extended: true }));
 //Users toevoegen
 app.post("/api/user/add", async (req, res) => {
   try {
-    console.log(req.body);
     const con = await connect();
 
     
@@ -94,7 +93,7 @@ app.post("/api/questions/add", async (req, res) => {
 
     const { text, location_id,  } = req.body;
     const [results, fields] = await con.execute(
-      "INSERT INTO users (text, location_id) VALUES (?, ?)",
+      "INSERT INTO questions (text, location_id) VALUES (?, ?)",
       [text, location_id]
     );
 

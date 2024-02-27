@@ -28,11 +28,11 @@ namespace OpendeurspelAPI
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-       
-        
-       
 
-        
+
+
+
+
 
 
         // wanneer je op een question drukt -> answers opvragen
@@ -120,26 +120,26 @@ namespace OpendeurspelAPI
 
         private async void Questions_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-                string selected = (string)Questions.SelectedItem;
-                int selectedId = Convert.ToInt32(selected.Split(' ')[0]);
 
-                try
-                {
-                    //add question id param
-                    List<Answer> list = await GetAnswersForQuestion(selectedId);
-                    Answers.Items.Clear();
-                    foreach (Answer answer in list)
-                    {
-                        Answers.Items.Add(answer.answer + ((answer.correct) ? " C" : " NC"));
-                    }
+            string selected = (string)Questions.SelectedItem;
+            int selectedId = Convert.ToInt32(selected.Split(' ')[0]);
 
-                }
-                catch (Exception ex)
+            try
+            {
+                //add question id param
+                List<Answer> list = await GetAnswersForQuestion(selectedId);
+                Answers.Items.Clear();
+                foreach (Answer answer in list)
                 {
-                     MessageBox.Show(ex.Message);
+                    Answers.Items.Add(answer.answer + ((answer.correct) ? " C" : " NC"));
                 }
-            
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
         //opvragen van answers op basis van question ID
         static async Task<List<Answer>> GetAnswersForQuestion(int question_id)
@@ -186,7 +186,7 @@ namespace OpendeurspelAPI
 
                 foreach (User users in list)
                 {
-                    Users.Items.Add(users.id + " " + users.firstName + " " + users.lastName + " " + users.age + " " +users.interest + " " +users.email + " " + users.consent + " " +users.code);
+                    Users.Items.Add(users.id + " " + users.firstName + " " + users.lastName + " " + users.age + " " + users.interest + " " + users.email + " " + users.consent + " " + users.code);
 
                 }
 
@@ -213,7 +213,7 @@ namespace OpendeurspelAPI
 
             try
             {
-                
+
                 List<Score> list = await GetScoreForUser(selectedId);
                 Scorelistbx.Items.Clear();
                 foreach (Score score in list)
@@ -245,7 +245,7 @@ namespace OpendeurspelAPI
 
                 foreach (Score score in list)
                 {
-                    Scorelistbx.Items.Add(score.id + " " + score.score + " " + score.question_id + " " + score.user_id );
+                    Scorelistbx.Items.Add(score.id + " " + score.score + " " + score.question_id + " " + score.user_id);
 
                 }
 
@@ -264,9 +264,85 @@ namespace OpendeurspelAPI
             return scoreList;
         }
 
-        private void NextPage_Click(object sender, EventArgs e)
+
+
+        private async void Adduser_Click(object sender, EventArgs e)
         {
 
+
+            var response = await AddUser(
+                firstNametxt.Text,
+                lastNametxt.Text,
+                Convert.ToBoolean(Consentbx.Checked),
+                Convert.ToInt32(agetxt.Text),
+                interest.Text,
+                email.Text);
+
+            MessageBox.Show(response);
         }
+        static async Task<string> AddUser(string firstNameN, string lastNameN,bool consentN, int ageN, string interestN, string emailN)
+        {
+            User user = new User
+            {
+                firstName = firstNameN,
+                lastName = lastNameN,
+                age = ageN,
+                consent = consentN,
+                interest = interestN,
+                email = emailN
+
+
+            };
+            StringContent json = new StringContent(JsonConvert.SerializeObject(user, Formatting.Indented), Encoding.UTF8,
+       "application/json");
+
+            var response = await client.PostAsync(
+                "user/add",
+                json);
+
+            response.EnsureSuccessStatusCode();
+
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+
+            return jsonResponse;
+
+        }
+
+        private async void Addquestionbttn_Click(object sender, EventArgs e)
+        {
+            var response = await AddQuestion(
+                  Vraagbx.Text,
+                  Convert.ToInt32(location_idbx.Text));
+                  
+
+            MessageBox.Show(response);
+
+        }
+        static async Task<string> AddQuestion(string QuestionN, int location_idN)
+        {
+            Question question= new Question
+            {
+                text = QuestionN,
+                location_id = location_idN,
+                
+
+
+            };
+            StringContent json = new StringContent(JsonConvert.SerializeObject(question, Formatting.Indented), Encoding.UTF8,
+       "application/json");
+
+            var response = await client.PostAsync(
+                "questions/add",
+                json);
+
+            response.EnsureSuccessStatusCode();
+
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+
+            return jsonResponse;
+
+        }
+
+       
     }
 }
