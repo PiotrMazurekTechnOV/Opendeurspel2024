@@ -68,7 +68,7 @@
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::Admin_Opendeurspel.Properties.Resources.Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__5_;
+            this.pictureBox2.Image = global::Question_Opendeurspel.Properties.Resources.Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__5_;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(887, 464);
@@ -81,7 +81,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Admin_Opendeurspel.Properties.Resources.Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__2_;
+            this.pictureBox1.Image = global::Question_Opendeurspel.Properties.Resources.Purple_and_Green_Modern_ICT_Computer_Parts_Classroom_Quiz__2_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(887, 464);
