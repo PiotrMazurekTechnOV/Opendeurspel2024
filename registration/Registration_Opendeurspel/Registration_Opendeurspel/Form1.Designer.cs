@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.InschrijfBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -36,13 +35,15 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InschrijfBtn
             // 
-            this.InschrijfBtn.Location = new System.Drawing.Point(373, 363);
+            this.InschrijfBtn.Location = new System.Drawing.Point(119, 299);
             this.InschrijfBtn.Name = "InschrijfBtn";
-            this.InschrijfBtn.Size = new System.Drawing.Size(63, 32);
+            this.InschrijfBtn.Size = new System.Drawing.Size(317, 96);
             this.InschrijfBtn.TabIndex = 0;
             this.InschrijfBtn.UseVisualStyleBackColor = true;
             this.InschrijfBtn.Click += new System.EventHandler(this.InschrijfBtn_Click);
@@ -65,7 +66,7 @@
             this.textBox2.Size = new System.Drawing.Size(229, 22);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Voornaam";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             // 
             // textBox3
             // 
@@ -106,13 +107,34 @@
             this.checkBox1.TabIndex = 6;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(623, 72);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(147, 31);
+            this.textBox6.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(623, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Uw nummer";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Registration_Opendeurspel.Properties.Resources._1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -138,6 +160,8 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label1;
     }
 }
 

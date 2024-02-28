@@ -50,8 +50,8 @@ namespace Registration_Opendeurspel
             InschrijfBtn.ForeColor = Color.Transparent;
             InschrijfBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
             InschrijfBtn.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            int percentage = 112;
-            int percentage2 = 185;
+            int percentage = 97;
+            int percentage2 = 183;
             int parentWidth = this.ClientSize.Width;
             int parentHeight = this.ClientSize.Height;
             int newX = (parentWidth * percentage) / 100;
@@ -64,7 +64,8 @@ namespace Registration_Opendeurspel
             this.BackgroundImageLayout = ImageLayout.Stretch;
             this.textBox1.AutoSize = false;
             this.textBox1.Size = new Size(475, 155);
-            int percentage3 = 90;
+            textBox1.Font = new Font(textBox1.Font.FontFamily, 16);
+            int percentage3 = 75;
             int percentage4 = 140;
             int newX1 = (parentWidth * percentage3) / 100;
             int newY1 = (parentHeight * percentage4) / 100;
@@ -72,7 +73,8 @@ namespace Registration_Opendeurspel
 
             this.textBox2.AutoSize = false;
             this.textBox2.Size = new Size(475, 75);
-            int percentage5 = 90;
+            textBox2.Font = new Font(textBox2.Font.FontFamily, 16);
+            int percentage5 = 75;
             int percentage6 = 37;
             int newX2 = (parentWidth * percentage5) / 100;
             int newY2 = (parentHeight * percentage6) / 100;
@@ -80,31 +82,52 @@ namespace Registration_Opendeurspel
 
             this.textBox3.AutoSize = false;
             this.textBox3.Size = new Size(475, 75);
-            int percentage7 = 90;
-            int percentage8 = 62;
+            textBox3.Font = new Font(textBox3.Font.FontFamily, 16);
+            int percentage7 = 75;
+            int percentage8 = 63;
             int newX3 = (parentWidth * percentage7) / 100;
             int newY3 = (parentHeight * percentage8) / 100;
             this.textBox3.Location = new Point(newX3, newY3);
 
             this.textBox4.AutoSize = false;
             this.textBox4.Size = new Size(475, 75);
-            int percentage9 = 90;
-            int percentage10 = 88;
+            textBox4.Font = new Font(textBox4.Font.FontFamily, 16);
+            int percentage9 = 75;
+            int percentage10 = 89;
             int newX4 = (parentWidth * percentage9) / 100;
             int newY4 = (parentHeight * percentage10) / 100;
             this.textBox4.Location = new Point(newX4, newY4);
 
             this.textBox5.AutoSize = false;
             this.textBox5.Size = new Size(475, 75);
-            int percentage11 = 90;
+            textBox5.Font = new Font(textBox5.Font.FontFamily, 16);
+            int percentage11 = 75;
             int percentage12 = 115;
             int newX5 = (parentWidth * percentage11) / 100;
             int newY5 = (parentHeight * percentage12) / 100;
             this.textBox5.Location = new Point(newX5, newY5);
 
+            this.textBox6.AutoSize = false;
+            this.textBox6.Size = new Size(200, 45);
+            textBox6.Font = new Font(textBox6.Font.FontFamily, 16);
+            int percentage15 = 208;
+            int percentage16 = 35;
+            int newX7 = (parentWidth * percentage15) / 100;
+            int newY7 = (parentHeight * percentage16) / 100;
+            this.textBox6.Location = new Point(newX7, newY7);
+
+            this.label1.AutoSize = false;
+            this.label1.Size = new Size(200, 45);
+            label1.Font = new Font(textBox5.Font.FontFamily, 16);
+            int percentage17 = 210;
+            int percentage18 = 25;
+            int newX8 = (parentWidth * percentage17) / 100;
+            int newY8 = (parentHeight * percentage18) / 100;
+            this.label1.Location = new Point(newX8, newY8);
+
             this.checkBox1.AutoSize = false;
-            int percentage13 = 86;
-            int percentage14 = 213;
+            int percentage13 = 70;
+            int percentage14 = 215;
             int newX6 = (parentWidth * percentage13) / 100;
             int newY6 = (parentHeight * percentage14) / 100;
             this.checkBox1.Location = new Point(newX6, newY6);
@@ -115,12 +138,6 @@ namespace Registration_Opendeurspel
             textBox1.Text = string.Empty;
             
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            textBox2.Text = string.Empty;
-        }
-
         private void textBox4_Click(object sender, EventArgs e)
         {
             textBox4.Text = string.Empty;
@@ -128,12 +145,16 @@ namespace Registration_Opendeurspel
 
         private void textBox3_Click(object sender, EventArgs e)
         {
-            textBox4.Text = string.Empty;
+            textBox3.Text = string.Empty;
         }
 
         private void textBox5_Click(object sender, EventArgs e)
         {
             textBox5.Text = string.Empty;
+        }
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = string.Empty;
         }
         static async Task<string> AddUser(string firstNameN, string lastNameN, bool consentN, int ageN, string interestN, string emailN)
         {
@@ -160,7 +181,7 @@ namespace Registration_Opendeurspel
             var jsonResponse = await response.Content.ReadAsStringAsync();
 
             return jsonResponse;
-
+           
         }
 
         private async void InschrijfBtn_Click(object sender, EventArgs e)
