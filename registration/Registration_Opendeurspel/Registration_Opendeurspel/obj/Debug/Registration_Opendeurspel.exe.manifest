@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Registration_Opendeurspel.exe" size="196072">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Registration_Opendeurspel.exe" size="198632">
       <assemblyIdentity name="Registration_Opendeurspel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>t0aLjKIf/Vha1LBQAU+cWXqizQG/7dlpJx+oJLrLviE=</dsig:DigestValue>
+        <dsig:DigestValue>qIn7M5w4++CO42/GysSFBfkSFldbI65AFLeh9vPf4aM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
