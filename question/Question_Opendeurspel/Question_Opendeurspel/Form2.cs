@@ -18,20 +18,24 @@ namespace Question_Opendeurspel
         static HttpClient client;
         private Location location;
         private Question question;
+        private List<Answer> answerList;
+        private User user;
         public Form2(Location location)
         {
             InitializeComponent();
             client = new HttpClient();
-            client.BaseAddress = new Uri("http://192.168.0.144/api/");
+            client.BaseAddress = new Uri("http://localhost/api/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
             this.location = location;
+            answerList = new List<Answer>();
         }
 
         private async void Form2_Load(object sender, EventArgs e)
         {
             this.question = await GetQuestionByLocation(location.id);
+            answerList = await GetAnswersForQuestion(question.id);
             this.WindowState = FormWindowState.Minimized;//zet het fullscreen
             this.FormBorderStyle = FormBorderStyle.None;//verwijdert de borders
             this.Bounds = Screen.PrimaryScreen.Bounds;//zet het op de borders van jou scherm
@@ -40,8 +44,9 @@ namespace Question_Opendeurspel
             button1.Location = new Point(pictureBox3.Width * 55 / 100, pictureBox3.Height * 125 / 100);
             button2.Location = new Point(pictureBox3.Width * 95 / 100, pictureBox3.Height * 125 / 100);
             button3.Location = new Point(pictureBox3.Width * 140 / 100, pictureBox3.Height * 125 / 100);
-            questionLbl.Text = "hoeveel onderbroeken draagth John Doe";
-            button1.Text = "3"; button2.Text = "2"; button3.Text = "1";
+            button1.Text = answerList[0].text; 
+            button2.Text = answerList[1].text; 
+            button3.Text = answerList[2].text; 
             questionLbl.Font = new Font("Calibri", 18);
             button1.Font = new Font("Calibri", 18);
             button2.Font = new Font("Calibri", 18);
@@ -80,10 +85,10 @@ namespace Question_Opendeurspel
         {
             try
             {
-                User user = await GetUserByCode();
+                user = await GetUserByCode();
                 if (user != null)
                 {
-                    questionLbl.Text = "Dag " + user.firstName + ", \n " + question.text;
+                    questionLbl.Text = "Dag " + user.firstName + " " + user.lastName + ", \n " + question.text;
 
                     pictureBox1.Visible = false;
                     textBox1.Visible = false;
@@ -115,9 +120,8 @@ namespace Question_Opendeurspel
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ResetScreen()
         {
-            MessageBox.Show("Juist Antwoord");
             pictureBox1.Visible = true;
             textBox1.Visible = true;
             EnterBtn.Visible = true;
@@ -128,65 +132,59 @@ namespace Question_Opendeurspel
             button3.Visible = false;
             textBox1.Text = "";
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Fout Antwoord");
-            pictureBox1.Visible = true;
-            textBox1.Visible = true;
-            EnterBtn.Visible = true;
-            pictureBox2.Visible = false;
-            questionLbl.Visible = false;
-            button1.Visible = false;
-            button2.Visible = false;
-            button3.Visible = false;
-            textBox1.Text = "";
+            if (answerList[0].correct)
+            {
+                MessageBox.Show("Goed zo, je hebt juist geantwoord!");
+                AddScore(1);
+                ResetScreen();
+
+            }
+            else
+            {
+                MessageBox.Show("Spijtig maar je antwoord is niet correct.");
+                AddScore(0);
+                ResetScreen();
+            }
+        }
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            if (answerList[1].correct)
+            {
+                MessageBox.Show("Goed zo, je hebt juist geantwoord!");
+                AddScore(1);
+                ResetScreen();
+            }
+            else
+            {
+                MessageBox.Show("Spijtig maar je antwoord is niet correct.");
+                AddScore(0);
+                ResetScreen();
+            }
+
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Fout Antwoord");
-            pictureBox1.Visible = true;
-            textBox1.Visible = true;
-            EnterBtn.Visible = true;
-            pictureBox2.Visible = false;
-            questionLbl.Visible = false;
-            button1.Visible = false;
-            button2.Visible = false;
-            button3.Visible = false;
-            textBox1.Text = "";
+            if (answerList[2].correct)
+            {
+                MessageBox.Show("Goed zo, je hebt juist geantwoord!");
+                AddScore(1);
+                ResetScreen();
+            }
+            else
+            {
+                MessageBox.Show("Spijtig maar je antwoord is niet correct.");
+                AddScore(0);
+                ResetScreen();
+            }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            MessageBox.Show("Fout Antwoord");
-            pictureBox1.Visible = true;
-            textBox1.Visible = true;
-            EnterBtn.Visible = true;
-            pictureBox2.Visible = false;
-            questionLbl.Visible = false;
-            button1.Visible = false;
-            button2.Visible = false;
-            button3.Visible = false;
-            textBox1.Text = "";
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            MessageBox.Show("Fout Antwoord");
-            pictureBox1.Visible = true;
-            textBox1.Visible = true;
-            EnterBtn.Visible = true;
-            pictureBox2.Visible = false;
-            questionLbl.Visible = false;
-            button1.Visible = false;
-            button2.Visible = false;
-            button3.Visible = false;
-            textBox1.Text = "";
-        }
         //opvragen van answers op basis van question ID
         static async Task<List<Answer>> GetAnswersForQuestion(int question_id)
 
         {
-
             var res = await client.GetAsync("answers/" + question_id);
 
             var jsonResponse = await res.Content.ReadAsStringAsync();
@@ -218,6 +216,21 @@ namespace Question_Opendeurspel
             return question;
         }
 
+        private async void AddScore(int correct)
+        {
+            try
+            {
+                var res = await client.GetAsync("score/" + user.id + "/" + question.id + "/" + correct);
+                MessageBox.Show("Je antwoord is opgeslagen");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
 
     }
 
@@ -245,7 +258,7 @@ namespace Question_Opendeurspel
     public class Answer
     {
         public int id { get; set; }
-        public string answer { get; set; }
+        public string text { get; set; }
 
         public int question_id { get; set; }
         public bool correct { get; set; }
