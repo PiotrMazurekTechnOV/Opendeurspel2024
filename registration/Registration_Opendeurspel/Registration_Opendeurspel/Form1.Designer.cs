@@ -137,11 +137,13 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::Registration_Opendeurspel.Properties.Resources._2;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Registration_Opendeurspel.Properties.Resources._2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(800, 450);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
@@ -149,19 +151,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(164)))), ((int)(((byte)(142)))));
+            this.label2.Font = new System.Drawing.Font("November", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(82)))), ((int)(((byte)(60)))));
             this.label2.Location = new System.Drawing.Point(443, 286);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(70, 75);
             this.label2.TabIndex = 10;
-            this.label2.Text = "label2";
+            this.label2.Text = "2";
+            this.label2.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(480, 414);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.button1.Font = new System.Drawing.Font("Rockwell", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(442, 318);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(328, 97);
             this.button1.TabIndex = 11;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "DOORGAAN";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1

@@ -26,7 +26,7 @@ namespace Registration_Opendeurspel
         {
             InitializeComponent();
             client = new HttpClient();
-            client.BaseAddress = new Uri("http://192.168.0.144/api/");
+            client.BaseAddress = new Uri("http://192.168.155.12/api/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -136,13 +136,23 @@ namespace Registration_Opendeurspel
             this.checkBox1.Location = new Point(newX6, newY6);
 
             this.label2.AutoSize = false;
-            this.label2.Size = new Size(200, 45);
-            label2.Font = new Font(label2.Font.FontFamily, 16);
-            int percentage19 = 210;
-            int percentage20 = 25;
+            this.label2.Size = new Size(170, 100);
+            label2.Font = new Font(label2.Font.FontFamily, 60);
+            int percentage19 = 115;
+            int percentage20 = 103;
             int newX9 = (parentWidth * percentage19) / 100;
             int newY9 = (parentHeight * percentage20) / 100;
-            this.label1.Location = new Point(newX9, newY9);
+            this.label2.Location = new Point(newX9, newY9);
+
+            button1.Parent = this;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            int percentage21 = 108;
+            int percentage22 = 195;
+            int newX10 = (parentWidth * percentage21) / 100;
+            int newY10 = (parentHeight * percentage22) / 100;
+            this.button1.Location = new Point(newX10, newY10);
 
         }
         private void check1()
@@ -264,8 +274,9 @@ namespace Registration_Opendeurspel
             response.EnsureSuccessStatusCode();
 
             var jsonResponse = await response.Content.ReadAsStringAsync();
-
+           
             return jsonResponse;
+            
 
         }
 
@@ -281,7 +292,7 @@ namespace Registration_Opendeurspel
             pictureBox1.Visible= true;
             label2.Visible=true;
             button1.Visible=true;
-            label2.Text=(response);
+            label2.Text= response;
         }
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
@@ -311,6 +322,13 @@ namespace Registration_Opendeurspel
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+        
+private void button2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = true;
+            label2.Visible = true;
+            button1.Visible = true;
         }
     }
 }
