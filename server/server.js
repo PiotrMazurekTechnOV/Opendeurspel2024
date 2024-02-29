@@ -217,7 +217,7 @@ app.get("/api/user/:code", async (req, res) => {
     const code = req.params.code;
     const [results, fields] = await con.execute("SELECT * FROM users WHERE code = ?", [code] );
     
-    res.json(results)
+    res.json(results[0])
   }
   catch (err){
     res.json(err)
@@ -245,8 +245,8 @@ app.get("/api/question/:locationId", async (req, res) => {
   try {
     const con = await connect();
     const id = req.params.locationId;
-    const [results, fields] = await con.execute("SELECT * FROM locations WHERE id = ?", [id] );
-    
+    const [results, fields] = await con.execute("SELECT * FROM questions WHERE location_id = ?", [id] );
+    console.log(results)
     res.json(results[0])
   }
   catch (err){
@@ -255,7 +255,39 @@ app.get("/api/question/:locationId", async (req, res) => {
   
 }); 
 
+//antwoorden verkrijgen op basis van de question id
+app.get("/api/answers/:questionId", async (req, res) => {
+  try {
+    const con = await connect();
+    const id = req.params.questionId;
+    const [results, fields] = await con.execute("SELECT * FROM answers WHERE question_id = ?", [id] );
+    console.log(results)
+    res.json(results)
+  }
+  catch (err){
+    res.json(err)
+  }
+  
+}); 
+//antwoorden verkrijgen op basis van de question id
+app.get("/api/score/:userId/:questionId/:correct", async (req, res) => {
+  try {
+    const con = await connect();
+    const user = req.params.userId;
+    const question = req.params.questionId;
+    const correct = req.params.correct;
 
+    const [results, fields] = await con.execute(
+      "INSERT INTO score (score, question_id, user_id) VALUES (?, ?, ?)",
+      [correct, question, user]
+    )
+    res.json("OK")
+  }
+  catch (err){
+    res.json(err)
+  }
+  
+}); 
 //test get
 app.get("/api/test", (req, res) => {
   console.log("test");
