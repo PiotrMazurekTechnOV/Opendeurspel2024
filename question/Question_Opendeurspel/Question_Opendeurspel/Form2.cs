@@ -120,28 +120,33 @@ namespace Question_Opendeurspel
 
         }
 
+        private void ResetScreen()
+        {
+            pictureBox1.Visible = true;
+            textBox1.Visible = true;
+            EnterBtn.Visible = true;
+            pictureBox2.Visible = false;
+            questionLbl.Visible = false;
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            textBox1.Text = "";
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (answerList[0].correct)
             {
                 MessageBox.Show("Goed zo, je hebt juist geantwoord!");
                 AddScore(1);
-                pictureBox1.Visible = true;
-                textBox1.Visible = true;
-                EnterBtn.Visible = true;
-                pictureBox2.Visible = false;
-                questionLbl.Visible = false;
-                button1.Visible = false;
-                button2.Visible = false;
-                button3.Visible = false;
-                textBox1.Text = "";
+                ResetScreen();
 
             }
             else
             {
                 MessageBox.Show("Spijtig maar je antwoord is niet correct.");
                 AddScore(0);
-
+                ResetScreen();
             }
         }
         private async void button2_Click(object sender, EventArgs e)
@@ -150,22 +155,15 @@ namespace Question_Opendeurspel
             {
                 MessageBox.Show("Goed zo, je hebt juist geantwoord!");
                 AddScore(1);
-                pictureBox1.Visible = true;
-                textBox1.Visible = true;
-                EnterBtn.Visible = true;
-                pictureBox2.Visible = false;
-                questionLbl.Visible = false;
-                button1.Visible = false;
-                button2.Visible = false;
-                button3.Visible = false;
-                textBox1.Text = "";
+                ResetScreen();
             }
             else
             {
                 MessageBox.Show("Spijtig maar je antwoord is niet correct.");
                 AddScore(0);
-
+                ResetScreen();
             }
+
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -173,21 +171,13 @@ namespace Question_Opendeurspel
             {
                 MessageBox.Show("Goed zo, je hebt juist geantwoord!");
                 AddScore(1);
-                pictureBox1.Visible = true;
-                textBox1.Visible = true;
-                EnterBtn.Visible = true;
-                pictureBox2.Visible = false;
-                questionLbl.Visible = false;
-                button1.Visible = false;
-                button2.Visible = false;
-                button3.Visible = false;
-                textBox1.Text = "";
+                ResetScreen();
             }
             else
             {
                 MessageBox.Show("Spijtig maar je antwoord is niet correct.");
                 AddScore(0);
-
+                ResetScreen();
             }
         }
 
