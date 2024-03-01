@@ -20,7 +20,7 @@ namespace Question_Opendeurspel
         {
             InitializeComponent();
             client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost/api/");
+            client.BaseAddress = new Uri("http://192.168.155.12/api/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));

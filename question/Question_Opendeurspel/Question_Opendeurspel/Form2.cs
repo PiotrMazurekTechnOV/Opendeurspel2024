@@ -25,7 +25,7 @@ namespace Question_Opendeurspel
         {
             InitializeComponent();
             client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost/api/");
+            client.BaseAddress = new Uri("http://192.168.155.12/api/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -48,9 +48,9 @@ namespace Question_Opendeurspel
             button2.Location = new Point(pictureBox3.Width * 205 / 100, pictureBox3.Height * 185 / 100);
             button3.Location = new Point(pictureBox3.Width * 78 / 100, pictureBox3.Height * 185 / 100);
             dungeonTextBox1.Location = new Point(pictureBox3.Width * 135 / 100, pictureBox3.Height * 323 / 100);
-            button1.Text = answerList[0].text; 
-            button2.Text = answerList[1].text; 
-            button3.Text = answerList[2].text;
+            button1.Text = answerList[0].answer; 
+            button2.Text = answerList[1].answer; 
+            button3.Text = answerList[2].answer;
             dungeonTextBox1.Text = "Made by 6ICT";
             textBox1.Font = new Font("Calibri", 60);
             questionLbl.Font = new Font("Calibri", 18);
@@ -268,7 +268,7 @@ namespace Question_Opendeurspel
     public class Answer
     {
         public int id { get; set; }
-        public string text { get; set; }
+        public string answer { get; set; }
 
         public int question_id { get; set; }
         public bool correct { get; set; }
