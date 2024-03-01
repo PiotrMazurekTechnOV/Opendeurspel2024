@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using ReaLTaiizor.Controls;
 
 namespace Question_Opendeurspel
 {
@@ -40,21 +41,30 @@ namespace Question_Opendeurspel
             this.FormBorderStyle = FormBorderStyle.None;//verwijdert de borders
             this.Bounds = Screen.PrimaryScreen.Bounds;//zet het op de borders van jou scherm
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            questionLbl.Location = new Point(pictureBox3.Width * 70 / 100, pictureBox3.Height * 80 / 100);
-            button1.Location = new Point(pictureBox3.Width * 55 / 100, pictureBox3.Height * 125 / 100);
-            button2.Location = new Point(pictureBox3.Width * 95 / 100, pictureBox3.Height * 125 / 100);
-            button3.Location = new Point(pictureBox3.Width * 140 / 100, pictureBox3.Height * 125 / 100);
+            textBox1.Location = new Point(pictureBox3.Width * 150 / 100, pictureBox3.Height * 160 / 100);
+            EnterBtn.Location = new Point(pictureBox3.Width * 152 / 100, pictureBox3.Height * 200 / 100);
+            questionLbl.Location = new Point(pictureBox3.Width * 148 / 100, pictureBox3.Height * 100 / 100);
+            button1.Location = new Point(pictureBox3.Width * 141 / 100, pictureBox3.Height * 185 / 100);
+            button2.Location = new Point(pictureBox3.Width * 205 / 100, pictureBox3.Height * 185 / 100);
+            button3.Location = new Point(pictureBox3.Width * 78 / 100, pictureBox3.Height * 185 / 100);
+            dungeonTextBox1.Location = new Point(pictureBox3.Width * 135 / 100, pictureBox3.Height * 323 / 100);
             button1.Text = answerList[0].text; 
             button2.Text = answerList[1].text; 
-            button3.Text = answerList[2].text; 
+            button3.Text = answerList[2].text;
+            dungeonTextBox1.Text = "Made by 6ICT";
+            textBox1.Font = new Font("Calibri", 60);
             questionLbl.Font = new Font("Calibri", 18);
+            questionLbl.TextAlign = ContentAlignment.MiddleCenter;
+            dungeonTextBox1.Font = new Font("Comic Sans MS", 33);
             button1.Font = new Font("Calibri", 18);
             button2.Font = new Font("Calibri", 18);
             button3.Font = new Font("Calibri", 18);
             questionLbl.AutoSize = true;
-            button1.Size = new System.Drawing.Size(200, 90);
-            button2.Size = new System.Drawing.Size(200, 90);
-            button3.Size = new System.Drawing.Size(200, 90);
+            dungeonTextBox1.Size = new System.Drawing.Size(300, 150);
+            textBox1.Size = new System.Drawing.Size(150, 100);
+            button1.Size = new System.Drawing.Size(120, 150);
+            button2.Size = new System.Drawing.Size(302, 150);
+            button3.Size = new System.Drawing.Size(302,150);
             button1.BringToFront();
             button2.BringToFront();
             button3.BringToFront();
