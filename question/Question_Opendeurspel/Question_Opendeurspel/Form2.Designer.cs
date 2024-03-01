@@ -38,6 +38,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dungeonTextBox1 = new ReaLTaiizor.Controls.DungeonTextBox();
+            this.dungeonTextBox2 = new ReaLTaiizor.Controls.DungeonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -161,11 +162,30 @@
             this.dungeonTextBox1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.dungeonTextBox1.UseSystemPasswordChar = false;
             // 
+            // dungeonTextBox2
+            // 
+            this.dungeonTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.dungeonTextBox2.EdgeColor = System.Drawing.Color.White;
+            this.dungeonTextBox2.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dungeonTextBox2.ForeColor = System.Drawing.Color.DimGray;
+            this.dungeonTextBox2.Location = new System.Drawing.Point(374, 141);
+            this.dungeonTextBox2.MaxLength = 32767;
+            this.dungeonTextBox2.Multiline = false;
+            this.dungeonTextBox2.Name = "dungeonTextBox2";
+            this.dungeonTextBox2.ReadOnly = false;
+            this.dungeonTextBox2.Size = new System.Drawing.Size(135, 37);
+            this.dungeonTextBox2.TabIndex = 13;
+            this.dungeonTextBox2.Text = "dungeonTextBox2";
+            this.dungeonTextBox2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dungeonTextBox2.UseSystemPasswordChar = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 464);
+            this.Controls.Add(this.dungeonTextBox2);
             this.Controls.Add(this.dungeonTextBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -198,5 +218,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox1;
+        private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox2;
     }
 }

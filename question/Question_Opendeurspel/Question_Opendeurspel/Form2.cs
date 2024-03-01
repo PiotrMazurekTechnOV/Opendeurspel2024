@@ -25,7 +25,7 @@ namespace Question_Opendeurspel
         {
             InitializeComponent();
             client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost/api/");
+            client.BaseAddress = new Uri("http://192.168.155.12/api/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -41,30 +41,38 @@ namespace Question_Opendeurspel
             this.FormBorderStyle = FormBorderStyle.None;//verwijdert de borders
             this.Bounds = Screen.PrimaryScreen.Bounds;//zet het op de borders van jou scherm
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            dungeonTextBox2.Location = new Point(pictureBox3.Width * 145 / 100, pictureBox3.Height * 25 / 100);
             textBox1.Location = new Point(pictureBox3.Width * 150 / 100, pictureBox3.Height * 160 / 100);
             EnterBtn.Location = new Point(pictureBox3.Width * 152 / 100, pictureBox3.Height * 200 / 100);
-            questionLbl.Location = new Point(pictureBox3.Width * 148 / 100, pictureBox3.Height * 100 / 100);
+            questionLbl.Location = new Point(pictureBox3.Width *86 / 100, pictureBox3.Height * 100 / 100);
             button1.Location = new Point(pictureBox3.Width * 141 / 100, pictureBox3.Height * 185 / 100);
             button2.Location = new Point(pictureBox3.Width * 205 / 100, pictureBox3.Height * 185 / 100);
             button3.Location = new Point(pictureBox3.Width * 78 / 100, pictureBox3.Height * 185 / 100);
-            dungeonTextBox1.Location = new Point(pictureBox3.Width * 135 / 100, pictureBox3.Height * 323 / 100);
-            button1.Text = answerList[0].text; 
-            button2.Text = answerList[1].text; 
-            button3.Text = answerList[2].text;
+            dungeonTextBox1.Location = new Point(pictureBox3.Width * 135 / 100, pictureBox3.Height * 322 / 100);
+            button1.Text = answerList[0].answer; 
+            button2.Text = answerList[1].answer; 
+            button3.Text = answerList[2].answer;
+            dungeonTextBox2.Text = "bij de klas" + location.name;
             dungeonTextBox1.Text = "Made by 6ICT";
             textBox1.Font = new Font("Calibri", 60);
             questionLbl.Font = new Font("Calibri", 18);
             questionLbl.TextAlign = ContentAlignment.MiddleCenter;
             dungeonTextBox1.Font = new Font("Comic Sans MS", 33);
+            dungeonTextBox2.Font = new Font("Accordion Black", 45);
             button1.Font = new Font("Calibri", 18);
             button2.Font = new Font("Calibri", 18);
             button3.Font = new Font("Calibri", 18);
+            EnterBtn.Text = "Bevestig";
             questionLbl.AutoSize = true;
-            dungeonTextBox1.Size = new System.Drawing.Size(300, 150);
+            dungeonTextBox1.Size = new System.Drawing.Size(300, 153);
+            dungeonTextBox2.Size = new System.Drawing.Size(550, 300);
             textBox1.Size = new System.Drawing.Size(150, 100);
-            button1.Size = new System.Drawing.Size(120, 150);
+            EnterBtn.Size = new System.Drawing.Size(120, 90);
+            button1.Size = new System.Drawing.Size(302, 150);
             button2.Size = new System.Drawing.Size(302, 150);
             button3.Size = new System.Drawing.Size(302,150);
+            EnterBtn.Font = new Font("Calibri", 25);
+            questionLbl.Font = new Font("Calibri", 35);
             button1.BringToFront();
             button2.BringToFront();
             button3.BringToFront();
@@ -73,7 +81,7 @@ namespace Question_Opendeurspel
             this.button2.Parent = this.pictureBox2;
             this.button3.Parent = this.pictureBox2;
             this.questionLbl.BackColor = Color.Transparent;
-
+            dungeonTextBox2.ForeColor = Color.Black;
             questionLbl.Padding = new Padding(6);
             button1.Padding = new Padding(6);
             button2.Padding = new Padding(6);
@@ -108,6 +116,7 @@ namespace Question_Opendeurspel
                     button1.Visible = true;
                     button2.Visible = true;
                     button3.Visible = true;
+                    dungeonTextBox2.Visible = false;
                 }
             }
             catch (Exception ex)
@@ -141,6 +150,7 @@ namespace Question_Opendeurspel
             button2.Visible = false;
             button3.Visible = false;
             textBox1.Text = "";
+            dungeonTextBox2.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -268,7 +278,7 @@ namespace Question_Opendeurspel
     public class Answer
     {
         public int id { get; set; }
-        public string text { get; set; }
+        public string answer { get; set; }
 
         public int question_id { get; set; }
         public bool correct { get; set; }

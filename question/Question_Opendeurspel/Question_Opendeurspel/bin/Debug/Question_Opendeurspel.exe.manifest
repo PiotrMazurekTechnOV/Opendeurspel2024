@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Question_Opendeurspel.exe" size="6814696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Question_Opendeurspel.exe" size="6817768">
       <assemblyIdentity name="Question_Opendeurspel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OgAex3Y9kd4yqRB+Ezo5SCJAdOKySBchYU8x9/dJpYk=</dsig:DigestValue>
+        <dsig:DigestValue>CQifDFmxqbilit1UuJVJQExtNie4ukbYK0kDEVbKUxc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
