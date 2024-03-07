@@ -52,7 +52,7 @@ namespace Question_Opendeurspel
             button1.Text = answerList[0].answer; 
             button2.Text = answerList[1].answer; 
             button3.Text = answerList[2].answer;
-            dungeonTextBox2.Text = "bij de klas" + location.name;
+            dungeonTextBox2.Text = "bij de klas " + location.name;
             dungeonTextBox1.Text = "Made by 6ICT";
             textBox1.Font = new Font("Calibri", 60);
             questionLbl.Font = new Font("Calibri", 18);
@@ -62,7 +62,7 @@ namespace Question_Opendeurspel
             button1.Font = new Font("Calibri", 18);
             button2.Font = new Font("Calibri", 18);
             button3.Font = new Font("Calibri", 18);
-            EnterBtn.Text = "Bevestig";
+            EnterBtn.Text = "START";
             questionLbl.AutoSize = true;
             dungeonTextBox1.Size = new System.Drawing.Size(300, 153);
             dungeonTextBox2.Size = new System.Drawing.Size(550, 300);
