@@ -1,0 +1,250 @@
+﻿namespace Registration_Opendeurspel
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.InschrijfBtn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ScoreBtn = new ReaLTaiizor.Controls.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // InschrijfBtn
+            // 
+            this.InschrijfBtn.Location = new System.Drawing.Point(119, 318);
+            this.InschrijfBtn.Name = "InschrijfBtn";
+            this.InschrijfBtn.Size = new System.Drawing.Size(302, 77);
+            this.InschrijfBtn.TabIndex = 0;
+            this.InschrijfBtn.UseVisualStyleBackColor = true;
+            this.InschrijfBtn.Click += new System.EventHandler(this.InschrijfBtn_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(286, 299);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(229, 22);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Wat zijn uw Interesses op deze school";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(288, 81);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(229, 22);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "Voornaam";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(286, 134);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(229, 22);
+            this.textBox3.TabIndex = 3;
+            this.textBox3.Text = "Familienaam";
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(288, 188);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(229, 22);
+            this.textBox4.TabIndex = 4;
+            this.textBox4.Text = "Leeftijd";
+            this.textBox4.Click += new System.EventHandler(this.textBox4_Click);
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(286, 236);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(229, 22);
+            this.textBox5.TabIndex = 5;
+            this.textBox5.Text = "Email";
+            this.textBox5.Click += new System.EventHandler(this.textBox5_Click);
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(255, 421);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(623, 72);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(147, 31);
+            this.textBox6.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(164)))), ((int)(((byte)(142)))));
+            this.label1.Location = new System.Drawing.Point(623, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Uw nummer";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Registration_Opendeurspel.Properties.Resources.Doorgaan;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(800, 450);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // ScoreBtn
+            // 
+            this.ScoreBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ScoreBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.ScoreBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ScoreBtn.EnteredBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.ScoreBtn.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.ScoreBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ScoreBtn.Image = null;
+            this.ScoreBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ScoreBtn.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.ScoreBtn.Location = new System.Drawing.Point(626, 110);
+            this.ScoreBtn.Name = "ScoreBtn";
+            this.ScoreBtn.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.ScoreBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.ScoreBtn.Size = new System.Drawing.Size(120, 40);
+            this.ScoreBtn.TabIndex = 14;
+            this.ScoreBtn.Text = "Zoek op";
+            this.ScoreBtn.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.ScoreBtn.Click += new System.EventHandler(this.ScoreBtn_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.button2.Font = new System.Drawing.Font("Rockwell", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(460, 273);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(328, 97);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "DOORGAAN";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(164)))), ((int)(((byte)(142)))));
+            this.label3.Enabled = false;
+            this.label3.Font = new System.Drawing.Font("November", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(82)))), ((int)(((byte)(60)))));
+            this.label3.Location = new System.Drawing.Point(436, 188);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 50);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "2";
+            this.label3.Visible = false;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Registration_Opendeurspel.Properties.Resources._1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ScoreBtn);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.InschrijfBtn);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.TransparencyKey = System.Drawing.Color.Fuchsia;
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button InschrijfBtn;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private ReaLTaiizor.Controls.Button ScoreBtn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
+    }
+}
+
