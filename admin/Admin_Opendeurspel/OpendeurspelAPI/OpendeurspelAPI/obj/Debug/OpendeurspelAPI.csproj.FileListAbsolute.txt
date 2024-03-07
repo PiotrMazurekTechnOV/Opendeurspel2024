@@ -1,0 +1,26 @@
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\OpendeurspelAPI.exe.config
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\OpendeurspelAPI.exe
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\OpendeurspelAPI.pdb
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.AssemblyReference.cache
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.Form1.resources
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.Properties.Resources.resources
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.GenerateResource.cache
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.CoreCompileInputs.cache
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.CopyComplete
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.exe
+C:\Users\NathanielGoessens\source\repos\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.pdb
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\OpendeurspelAPI.exe.config
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\OpendeurspelAPI.exe
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\OpendeurspelAPI.pdb
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.AssemblyReference.cache
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.Form1.resources
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.Properties.Resources.resources
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.GenerateResource.cache
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.CoreCompileInputs.cache
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.csproj.CopyComplete
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.exe
+C:\Users\NathanielGoessens\OneDrive - Katholiek Onderwijs Vilvoorde Machelen Diegem vzw\Documenten\GitHub\Opendeurspel2024\admin\Admin_Opendeurspel\OpendeurspelAPI\OpendeurspelAPI\obj\Debug\OpendeurspelAPI.pdb
