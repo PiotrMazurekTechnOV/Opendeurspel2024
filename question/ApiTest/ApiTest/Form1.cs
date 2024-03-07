@@ -11,6 +11,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using System.Drawing.Printing;
 
 namespace ApiTest
 {
@@ -28,15 +29,15 @@ namespace ApiTest
                 new MediaTypeWithQualityHeaderValue("application/json"));
 
         }
-
+        //opvragen van alle questions en in een listbox
         private async void testBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                List<Question> list = await GetTest();
+                List<Question> list = await GetQuestions();
                 foreach(Question question in list)
                 {
-                    MessageBox.Show(question.text + " " + question.location_id);
+                    questionsLstBx.Items.Add(question.id + " " + question.location_id + " " + question.text);
 
                 }
 
@@ -56,7 +57,7 @@ namespace ApiTest
             MessageBox.Show(response);
         }
 
-        static async Task<List<Question>> GetTest()
+        static async Task<List<Question>> GetQuestions()
         {
             var res = await client.GetAsync("questions");
             var jsonResponse = await res.Content.ReadAsStringAsync();
@@ -89,12 +90,101 @@ namespace ApiTest
 
             return jsonResponse;
         }
+
+        private async void locationTestBtn_Click(object sender, EventArgs e)
+        {
+            var response = await AddLocation("ICT", "112");
+
+            MessageBox.Show(response);
+        }
+
+        static async Task<string> AddLocation(string nameN, string roomN)
+        {
+            Location location = new Location
+            {
+                room = roomN,
+                name = nameN
+            };
+
+            StringContent json = new StringContent(JsonConvert.SerializeObject(location, Formatting.Indented), Encoding.UTF8,
+        "application/json");
+
+            var response = await client.PostAsync(
+                "location/add",
+                json);
+
+            response.EnsureSuccessStatusCode();
+
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+
+            return jsonResponse;
+        }
+
+        private async void answerBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //add question id param
+                List<Answer> list = await GetAnswersForQuestion(0);
+                foreach (Answer answer in list)
+                {
+                    answersLstBx.Items.Add(answer.question_id + " " + answer.text);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //opvragen van answers op basis van question ID
+        static async Task<List<Answer>> GetAnswersForQuestion(int question_id)
+        {
+            var res = await client.GetAsync("answers/" + question_id);
+            var jsonResponse = await res.Content.ReadAsStringAsync();
+            List<Answer> answerList = JsonConvert.DeserializeObject<List<Answer>>(jsonResponse);
+
+            return answerList;
+        }
+
+        private void answersLstBx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = (string)answersLstBx.SelectedItem;
+            string selectedId = selected.Split(' ')[0];
+
+            MessageBox.Show(selectedId);
+        }
+
+        //wanneer je op een question drukt -> answers opvragen
+        private async void questionsLstBx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = (string)questionsLstBx.SelectedItem;
+            int selectedId = Convert.ToInt32(selected.Split(' ')[0]);
+
+            try
+            {
+                //add question id param
+                List<Answer> list = await GetAnswersForQuestion(selectedId);
+                answersLstBx.Items.Clear();
+                foreach (Answer answer in list)
+                {
+                    answersLstBx.Items.Add(answer.text + ((answer.correct) ? " C" : " NC"));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 
 
 
     public class User
     {
+        public int id { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public int age { get; set; }
@@ -106,9 +196,28 @@ namespace ApiTest
 
     public class Question
     {
+        public int id { get; set; }
         public string text { get; set; }
 
         public int location_id { get; set; }
+
+    }
+    public class Answer
+    {
+        public int id { get; set; }
+        public string text { get; set; }
+
+        public int question_id { get; set; }
+        public bool correct { get; set; }
+
+    }
+
+    public class Location
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+
+        public string room { get; set; }
 
     }
 }

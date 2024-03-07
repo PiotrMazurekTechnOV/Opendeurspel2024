@@ -15,6 +15,13 @@ namespace Admin_Opendeurspel
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("nathaniel");
+            MessageBox.Show("is");
+            MessageBox.Show("mijn");
+            MessageBox.Show("toekomstige");
+            MessageBox.Show("vrouw");
+            MessageBox.Show("Ik verwacht 20k ring");
         }
+        
     }
 }
