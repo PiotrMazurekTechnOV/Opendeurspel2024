@@ -43,6 +43,12 @@ namespace Registration_Opendeurspel
             public string interest { get; set; }
             public string code { get; set; }
         }
+
+        public class Score
+        {
+            public int score { get; set; }
+            public int tries { get; set; }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             InschrijfBtn.Parent = this;
@@ -53,8 +59,8 @@ namespace Registration_Opendeurspel
             InschrijfBtn.ForeColor = Color.Transparent;
             InschrijfBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
             InschrijfBtn.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            int percentage = 97;
-            int percentage2 = 183;
+            int percentage = 96;
+            int percentage2 = 195;
             int parentWidth = this.ClientSize.Width;
             int parentHeight = this.ClientSize.Height;
             int newX = (parentWidth * percentage) / 100;
@@ -68,17 +74,17 @@ namespace Registration_Opendeurspel
             this.textBox1.AutoSize = false;
             this.textBox1.Size = new Size(475, 155);
             textBox1.Font = new Font(textBox1.Font.FontFamily, 16);
-            int percentage3 = 75;
-            int percentage4 = 140;
+            int percentage3 = 74;
+            int percentage4 = 147;
             int newX1 = (parentWidth * percentage3) / 100;
             int newY1 = (parentHeight * percentage4) / 100;
             this.textBox1.Location = new Point(newX1, newY1);
 
             this.textBox2.AutoSize = false;
-            this.textBox2.Size = new Size(475, 75);
+            this.textBox2.Size = new Size(475, 76);
             textBox2.Font = new Font(textBox2.Font.FontFamily, 16);
-            int percentage5 = 75;
-            int percentage6 = 37;
+            int percentage5 = 74;
+            int percentage6 = 38;
             int newX2 = (parentWidth * percentage5) / 100;
             int newY2 = (parentHeight * percentage6) / 100;
             this.textBox2.Location = new Point(newX2, newY2);
@@ -86,26 +92,26 @@ namespace Registration_Opendeurspel
             this.textBox3.AutoSize = false;
             this.textBox3.Size = new Size(475, 75);
             textBox3.Font = new Font(textBox3.Font.FontFamily, 16);
-            int percentage7 = 75;
-            int percentage8 = 63;
+            int percentage7 = 74;
+            int percentage8 = 65;
             int newX3 = (parentWidth * percentage7) / 100;
             int newY3 = (parentHeight * percentage8) / 100;
             this.textBox3.Location = new Point(newX3, newY3);
 
             this.textBox4.AutoSize = false;
-            this.textBox4.Size = new Size(475, 75);
+            this.textBox4.Size = new Size(475, 77);
             textBox4.Font = new Font(textBox4.Font.FontFamily, 16);
-            int percentage9 = 75;
-            int percentage10 = 89;
+            int percentage9 = 73;
+            int percentage10 = 91;
             int newX4 = (parentWidth * percentage9) / 100;
             int newY4 = (parentHeight * percentage10) / 100;
             this.textBox4.Location = new Point(newX4, newY4);
 
             this.textBox5.AutoSize = false;
-            this.textBox5.Size = new Size(475, 75);
+            this.textBox5.Size = new Size(475, 77);
             textBox5.Font = new Font(textBox5.Font.FontFamily, 16);
-            int percentage11 = 75;
-            int percentage12 = 115;
+            int percentage11 = 74;
+            int percentage12 = 119;
             int newX5 = (parentWidth * percentage11) / 100;
             int newY5 = (parentHeight * percentage12) / 100;
             this.textBox5.Location = new Point(newX5, newY5);
@@ -114,7 +120,7 @@ namespace Registration_Opendeurspel
             this.textBox6.Size = new Size(200, 45);
             textBox6.Font = new Font(textBox6.Font.FontFamily, 16);
             int percentage15 = 208;
-            int percentage16 = 35;
+            int percentage16 = 48;
             int newX7 = (parentWidth * percentage15) / 100;
             int newY7 = (parentHeight * percentage16) / 100;
             this.textBox6.Location = new Point(newX7, newY7);
@@ -123,36 +129,42 @@ namespace Registration_Opendeurspel
             this.label1.Size = new Size(200, 45);
             label1.Font = new Font(label1.Font.FontFamily, 16);
             int percentage17 = 210;
-            int percentage18 = 25;
+            int percentage18 = 32;
             int newX8 = (parentWidth * percentage17) / 100;
             int newY8 = (parentHeight * percentage18) / 100;
             this.label1.Location = new Point(newX8, newY8);
 
             this.checkBox1.AutoSize = false;
             int percentage13 = 70;
-            int percentage14 = 215;
+            int percentage14 = 222;
             int newX6 = (parentWidth * percentage13) / 100;
             int newY6 = (parentHeight * percentage14) / 100;
             this.checkBox1.Location = new Point(newX6, newY6);
 
-            this.label2.AutoSize = false;
-            this.label2.Size = new Size(170, 100);
-            label2.Font = new Font(label2.Font.FontFamily, 60);
-            int percentage19 = 115;
-            int percentage20 = 103;
+            this.label3.AutoSize = false;
+            this.label3.Size = new Size(170, 150);
+            label3.Font = new Font(label3.Font.FontFamily, 60);
+            int percentage19 = 100;
+            int percentage20 = 145;
             int newX9 = (parentWidth * percentage19) / 100;
             int newY9 = (parentHeight * percentage20) / 100;
-            this.label2.Location = new Point(newX9, newY9);
+            this.label3.Location = new Point(newX9, newY9);
 
-            button1.Parent = this;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
-            int percentage21 = 108;
-            int percentage22 = 195;
+            button2.Cursor = Cursors.Hand;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 0;
+            int percentage21 = 135;
+            int percentage22 = 180;
             int newX10 = (parentWidth * percentage21) / 100;
             int newY10 = (parentHeight * percentage22) / 100;
-            this.button1.Location = new Point(newX10, newY10);
+            this.button2.Location = new Point(newX10, newY10);
+
+            ScoreBtn.Cursor = Cursors.Hand;
+            int percentage23 = 208;
+            int percentage24 = 60;
+            int newX11 = (parentWidth * percentage23) / 100;
+            int newY11 = (parentHeight * percentage24) / 100;
+            this.ScoreBtn.Location = new Point(newX11, newY11);
 
         }
         private void check1()
@@ -290,9 +302,11 @@ namespace Registration_Opendeurspel
                textBox1.Text, //interesse
                textBox5.Text); //email
             pictureBox1.Visible= true;
-            label2.Visible=true;
-            button1.Visible=true;
-            label2.Text= response;
+            label3.Visible=true;
+            button2.Visible=true;
+            ScoreBtn.Visible=false;
+            label3.Text= response;
+           
         }
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
@@ -319,16 +333,26 @@ namespace Registration_Opendeurspel
             changed1 = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             Application.Restart();
         }
-        
-private void button2_Click(object sender, EventArgs e)
+
+        private async void ScoreBtn_Click(object sender, EventArgs e)
         {
-            pictureBox1.Visible = true;
-            label2.Visible = true;
-            button1.Visible = true;
+            try
+            {
+                var res = await client.GetAsync("score/" + Convert.ToInt32(textBox6.Text));
+                var jsonResponse = await res.Content.ReadAsStringAsync();
+
+                Score score = JsonConvert.DeserializeObject<Score>(jsonResponse);
+
+                MessageBox.Show("Je score is: " + score.score + "/" + score.tries);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
